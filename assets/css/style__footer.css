@@ -1,0 +1,88 @@
+.footer {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    height: 200px;
+    padding-top: 15px;
+    background: black;
+    color: white;
+}
+
+.footer h1 {
+    font-size: 24px;
+    text-align: jusitfy;
+}
+
+.footer p {
+    margin: 0;
+    text-align: justify;
+    font-size: 16px;
+    color: #BABABA;
+}
+
+.footer > div {
+    flex-basis: 25%;
+    padding-left: 5%;
+}
+
+.footer form {
+    width: 75%;
+}
+
+.footer input[type=text] {
+    background: inherit;
+    color: white;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #BABABA;
+}
+
+.footer input[type=text]:focus {
+    background: inherit;
+    outline: none;
+}
+
+::placeholder {
+    color: #BABABA;
+}
+
+.subsButton {
+    background: #9081DE;
+    color: white;
+    margin-top: 20px;
+    width: 100%;
+    height: 32px;
+    border: none;
+    border-radius: 16px;
+}
+
+.social__media img {
+    width: 50px;
+    height: 50px;
+}
+
+@media only screen and (max-width: 1100px) {
+    .footer {
+        height: 250px;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    .footer {
+        height: 350px;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .footer {
+        height: 400px;
+    }
+}
+
+.footer input:-webkit-autofill,
+.footer input:-webkit-autofill:hover, 
+.footer input:-webkit-autofill:focus {
+    -webkit-text-fill-color: white;
+    transition: background-color 5000s ease-in-out 0s;
+}
