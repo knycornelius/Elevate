@@ -39,7 +39,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 										<img class="img-responsive" src="<?php echo base_url('assets/images/e_women/') . $womendata[$x]['image1'];
 																					?>" alt="" />
 									</a>
-									<h3><a href="detail?category=e_women&id=<?php echo $womendata[$x]['id_item'] ?>"><?= $womendata[$x]['item_name']; ?></a></h3>
+									<h3 style="height: 2.5rem"><a href="detail?category=e_women&id=<?php echo $womendata[$x]['id_item'] ?>"><?= $womendata[$x]['item_name']; ?></a></h3>
 									<div class="price">
 										<h5 class="item_price"><?= "Rp." . number_format($womendata[$x]['price'], 0, ",", ".") ?></h5>
 										<a href="#" class="item_add">Add To Cart</a>
