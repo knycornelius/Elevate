@@ -111,6 +111,6 @@ class Login extends CI_Controller
     {
 
         $this->session->sess_destroy();
-        redirect('home');
+        redirect('index.php/home');
     }
 }

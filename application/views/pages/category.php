@@ -2,22 +2,22 @@
     <h3 class="cate">Categories</h3>
     <ul class="menu-drop">
         <ul class="cute">
-            <li style="color:#DCDCDC;"><a href="<?php echo base_url('men'); ?>">Men </a>
+            <li style="color:#DCDCDC;"><a href="<?php echo base_url('index.php/men'); ?>">Men </a>
 
             </li>
         </ul>
         <ul class="cute">
-            <li><a href="<?php echo base_url('women'); ?>">Women </a>
+            <li><a href="<?php echo base_url('index.php/women'); ?>">Women </a>
 
             </li>
         </ul>
         <ul class="cute">
-            <li><a href="<?php echo base_url('kids'); ?>">Kids</a>
+            <li><a href="<?php echo base_url('index.php/kids'); ?>">Kids</a>
 
             </li>
         </ul>
         <ul class="cute">
-            <li><a href="<?php echo base_url('accessory'); ?>">Accessory</a>
+            <li><a href="<?php echo base_url('index.php/accessory'); ?>">Accessory</a>
 
             </li>
         </ul>

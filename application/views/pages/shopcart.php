@@ -19,7 +19,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	</div>
 	<!---->
 	<div class="container">
-		<form method="post" action="<?= base_url('checkout'); ?>">
+		<form method="post" action="<?= base_url('index.php/checkout'); ?>">
 			<div class="check-out">
 				<h2>Checkout</h2>
 				<table>

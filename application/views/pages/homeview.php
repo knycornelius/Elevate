@@ -61,11 +61,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 								<img class="img-responsive" src="<?php echo base_url('assets/'); ?>images/pi5.png" alt="" />
 							</a>
 							<h3><a href="single.html">Palazzo</a></h3>
-							<div class="price">
+							<!-- <div class="price">
 								<h5 class="item_price">$450</h5>
 
 								<div class="clearfix"> </div>
-							</div>
+							</div> -->
 						</div>
 					</div>
 					<div class="col-md-6 animated wow fadeInDown animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInDown;">
@@ -81,11 +81,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 								<img class="img-responsive" src="<?php echo base_url('assets/'); ?>images/pi4.png" alt="" />
 							</a>
 							<h3><a href="single.html">Pant</a></h3>
-							<div class="price">
+							<!-- <div class="price">
 								<h5 class="item_price">$300</h5>
 
 								<div class="clearfix"> </div>
-							</div>
+							</div> -->
 						</div>
 					</div>
 					<div class="clearfix"> </div>
@@ -97,11 +97,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 								<img class="img-responsive" src="<?php echo base_url('assets/'); ?>images/pi3.png" alt="" />
 							</a>
 							<h3><a href="single.html">Palazoo</a></h3>
-							<div class="price">
+							<!-- <div class="price">
 								<h5 class="item_price">$300</h5>
 
 								<div class="clearfix"> </div>
-							</div>
+							</div> -->
 						</div>
 					</div>
 					<div class="col-md-3 col-md2 animated wow fadeInLeft" data-wow-delay=".5s">
@@ -110,11 +110,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 								<img class="img-responsive" src="<?php echo base_url('assets/'); ?>images/pi2.png" alt="" />
 							</a>
 							<h3><a href="single.html">Trouser</a></h3>
-							<div class="price">
+							<!-- <div class="price">
 								<h5 class="item_price">$300</h5>
 
 								<div class="clearfix"> </div>
-							</div>
+							</div> -->
 						</div>
 					</div>
 					<div class="col-md-3 col-md2 animated wow fadeInRight" data-wow-delay=".5s">
@@ -123,11 +123,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 								<img class="img-responsive" src="<?php echo base_url('assets/'); ?>images/pi6.png" alt="" />
 							</a>
 							<h3><a href="single.html">Trouser</a></h3>
-							<div class="price">
+							<!-- <div class="price">
 								<h5 class="item_price">$300</h5>
 
 								<div class="clearfix"> </div>
-							</div>
+							</div> -->
 						</div>
 					</div>
 					<div class="col-md-3 col-md2 cmn animated wow fadeInRight" data-wow-delay=".5s">
@@ -136,11 +136,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 								<img class="img-responsive" src="<?php echo base_url('assets/'); ?>images/pi8.png" alt="" />
 							</a>
 							<h3><a href="single.html">Palazoo</a></h3>
-							<div class="price">
+							<!-- <div class="price">
 								<h5 class="item_price">$300</h5>
 
 								<div class="clearfix"> </div>
-							</div>
+							</div> -->
 						</div>
 					</div>
 					<div class="clearfix"> </div>
@@ -236,12 +236,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							<img class="img-responsive" src="<?php echo base_url('assets/'); ?>images/pi9.png" alt="" />
 						</a>
 						<h3><a href="single.html">Trousers</a></h3>
-						<div class="price">
+						<<!-- div class="price">
 							<h5 class="item_price">$300</h5>
 
 
 							<div class="clearfix"> </div>
-						</div>
+						</div> -->
 
 					</div>
 				</div>
@@ -251,11 +251,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							<img class="img-responsive" src="<?php echo base_url('assets/'); ?>images/pi10.png" alt="" />
 						</a>
 						<h3><a href="single.html">Formal</a></h3>
-						<div class="price">
+						<!-- <div class="price">
 							<h5 class="item_price">$450</h5>
 
 							<div class="clearfix"> </div>
-						</div>
+						</div> -->
 
 					</div>
 				</div>
@@ -265,11 +265,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							<img class="img-responsive" src="<?php echo base_url('assets/'); ?>images/pi11.png" alt="" />
 						</a>
 						<h3><a href="single.html">Trousers</a></h3>
-						<div class="price">
+						<!-- <div class="price">
 							<h5 class="item_price">$350</h5>
 
 							<div class="clearfix"> </div>
-						</div>
+						</div> -->
 
 					</div>
 				</div>
@@ -279,11 +279,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							<img class="img-responsive" src="<?php echo base_url('assets/'); ?>images/pi12.png" alt="" />
 						</a>
 						<h3><a href="single.html">Formal</a></h3>
-						<div class="price">
+						<!-- <div class="price">
 							<h5 class="item_price">$400</h5>
 
 							<div class="clearfix"> </div>
-						</div>
+						</div> -->
 
 					</div>
 				</div>

@@ -3,17 +3,8 @@
 
 <head>
     <title>ELEVATE Indonesia: Belanja Fashion Online Terlengkap di Indonesia</title>
-    <link href="<?php echo base_url('assets/'); ?>css/bootstrap-3.1.1.min.css" rel='stylesheet' type='text/css' />
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="<?php echo base_url('assets/'); ?>js/jquery.min.js"></script>
-    <!-- Custom Theme files -->
-    <!--theme-style-->
-    <link href="<?php echo base_url('assets/'); ?>css/style.css" rel="stylesheet" type="text/css" media="all" />
-    <!--//theme-style-->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="keywords" content="Youth Fashion Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    
+    
     <script type="application/x-javascript">
         addEventListener("load", function() {
             setTimeout(hideURLbar, 0);
@@ -23,13 +14,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             window.scrollTo(0, 1);
         }
     </script>
-    <link href=//fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
-    <link href=//fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
-    <!-- start menu -->
-    <script src="<?php echo base_url('assets/'); ?>js/bootstrap.min.js"></script>
-    <script src="<?php echo base_url('assets/'); ?>js/simpleCart.min.js"> </script>
-    <!-- slide -->
-    <script src="<?php echo base_url('assets/'); ?>js/responsiveslides.min.js"></script>
+
+    
     <script>
         $(function() {
             $("#slider").responsiveSlides({
@@ -40,9 +26,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             });
         });
     </script>
-    <!-- animation-effect -->
-    <link href="<?php echo base_url('assets/'); ?>css/animate.min.css" rel="stylesheet">
-    <script src="<?php echo base_url('assets/'); ?>js/wow.min.js"></script>
+
     <script>
         new WOW().init();
     </script>
@@ -50,94 +34,23 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <script>
         function logout() {
             sessionStorage.clear();
-            window.location.href = "http://localhost/elevate/index.php/login/logout";
+            window.location.href = "<?php echo base_url()?>index.php/login/logout";
         }
 
         function login() {
-            window.location.href = "http://localhost/elevate/index.php/login";
+            window.location.href = "<?php echo base_url()?>index.php/login";
 
         }
     </script>
     <style>
-        .navbar .nav-item i {
-            font-size: 18px;
-        }
-
-        .navbar .dropdown-item i {
-            font-size: 16px;
-            min-width: 22px;
-        }
-
-        .navbar .nav-item.open>a {
-            background: none !important;
-        }
-
-        .navbar .dropdown-menu {
-            border-radius: 1px;
-            border-color: #e5e5e5;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, .05);
-        }
-
-        .navbar .dropdown-menu li a {
-            color: #777;
-            padding: 8px 20px;
-            line-height: normal;
-        }
-
-        .navbar .dropdown-menu li a:hover,
-        .navbar .dropdown-menu li a:active {
-            color: #333;
-        }
-
-        .navbar .dropdown-item .material-icons {
-            font-size: 21px;
-            line-height: 16px;
-            vertical-align: middle;
-            margin-top: -2px;
-        }
-
-        .navbar .badge {
-            background: #f44336;
-            font-size: 11px;
-            border-radius: 20px;
-            position: absolute;
-            min-width: 10px;
-            padding: 4px 6px 0;
-            min-height: 18px;
-            top: 5px;
-        }
-
-        .navbar ul.nav li a.notifications,
-        .navbar ul.nav li a.messages {
-            position: relative;
-            margin-right: 10px;
-        }
-
-        .navbar ul.nav li a.messages {
-            margin-right: 20px;
-        }
-
-        .navbar a.notifications .badge {
-            margin-left: -8px;
-        }
-
-        .navbar a.messages .badge {
-            margin-left: -4px;
-        }
-
-        .navbar .active a,
-        .navbar .active a:hover,
-        .navbar .active a:focus {
-            background: transparent !important;
-        }
-
-
-
-
         .dropdown:hover .dropdown-menu {
             display: block;
         }
     </style>
+    <?php
+        echo $css;
+        echo $js;
+    ?>
 </head>
 
 
@@ -146,14 +59,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <div class="header-top">
             <div class="container">
                 <div class="col-sm-4 logo animated wow fadeInLeft" data-wow-delay=".5s">
-                    <h1><a href="<?php echo base_url('home'); ?>">Ele <span>vate</span></a></h1>
+                    <h1><a href="<?php echo base_url('home'); ?>">Ele<span>vate</span></a></h1>
                 </div>
                 <div class="col-sm-4 world animated wow fadeInRight" data-wow-delay=".5s">
                     <div class="cart box_1">
                         <a href="<?= base_url('index.php/shopcart') ?>">
                             <h3>
                                 <div class="total">
-                                    <span class="simpleCart_total"></span></div>
+                                    <!-- <span class="simpleCart_total"></span></div> -->
                                 <img src="<?php echo base_url('assets/'); ?>images/cart.png" alt="" />
                             </h3>
                         </a>
@@ -190,7 +103,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <!-- Collect the nav links, forms, and other content for toggling -->
                         <div class="collapse navbar-collapse justify-content-start" id="bs-megadropdown-tabs">
                             <ul class="nav navbar-nav nav_1">
-                                <li><a href="<?php echo base_url('home'); ?>">Home</a></li>
+                                <li><a href="<?php echo base_url('index.php/home'); ?>">Home</a></li>
 
                                 <li class="dropdown mega-dropdown active">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Category<span class="caret"></span></a>
@@ -200,12 +113,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                             <div class="tab-content">
                                                 <div class="tab-pane active" id="category">
                                                     <ul class="nav-list list-inline">
-                                                        <li><a href="<?= base_url('men'); ?>">Men</a></li>
-                                                        <li><a href="<?= base_url('women'); ?>">Women</a></li>
-                                                        <li><a href="<?= base_url('accessory'); ?>">Accessory</a></li>
-                                                        <li><a href="<?= base_url('kids'); ?>">Kids</a></li>
-                                                        <li><a href="<?= base_url('footwear'); ?>"></a>Footwear</li>
-
+                                                        <li><a href="<?= base_url('index.php/men'); ?>">Men</a></li>
+                                                        <li><a href="<?= base_url('index.php/women'); ?>">Women</a></li>
+                                                        <li><a href="<?= base_url('index.php/accessory'); ?>">Accessory</a></li>
+                                                        <li><a href="<?= base_url('index.php/kids'); ?>">Kids</a></li>
+                                                        <li><a href="<?= base_url('index.php/footwear'); ?>"></a>Footwear</li>
                                                     </ul>
                                                 </div>
 
@@ -220,7 +132,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 
                                 <?php if ($user) { ?>
-                                    <li style="text-align:right;" class="nav-item dropdown " id="dropdownMenu1"><a href="#" class="nav-link dropdown-toggle user-action" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img src="<?= base_url('assets/images/' . $user['image']); ?>" class="img-profile rounded-circle"><?php echo $user['name']; ?></a>
+                                    <li style="text-align:right;" class="nav-item dropdown " id="dropdownMenu1"><a href="#" class="nav-link dropdown-toggle user-action" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php echo $user['name']; ?><img src="<?= base_url('assets/images/' . $user['image']); ?>" style="width:30px;height:30px;" class="img-profile rounded-circle"></a>
 
                                         <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
 
@@ -251,8 +163,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
                 <div class="clearfix"> </div>
                 <!---pop-up-box---->
-                <link href="<?php echo base_url('assets/'); ?>css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
-                <script src="<?php echo base_url('assets/'); ?>js/jquery.magnific-popup.js" type="text/javascript"></script>
+                
+                
                 <!---//pop-up-box---->
                 <div id="small-dialog" class="mfp-hide">
                     <div class="search-top">

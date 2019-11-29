@@ -29,11 +29,17 @@ class Detail extends CI_Controller
     public function add_to_cart()
     {
 
-        $user = $this->db->get_where('user', ['email' =>
+        $data['user'] = $this->db->get_where('user', ['email' =>
         $this->session->userdata('email')])->row_array();
         // $items = $this->fashions->get($this->input->post('id'));
-        $data['itemid'] = $_GET['id'];
-        $data['itemcategory'] =  $_GET['category'];
+        $data['itemid'] = $this->input->post('id');
+        $data['itemcategory'] =  $this->input->post('itemcategory');
+        $data['cat'] = $this->fashions->get_item_category($data['itemcategory']);
+        $data['js'] = $this->load->view('include/javascript.php', NULL, TRUE);
+        $data['css'] = $this->load->view('include/css.php', NULL, TRUE);
+        $data['header'] = $this->load->view('pages/header.php', $data, TRUE);
+        $data['footer'] = $this->load->view('pages/footer.php', NULL, TRUE);
+        $data['categories'] = $this->load->view('pages/category.php', NULL, TRUE);
         $datacart = array(
             'iduser' => $_SESSION["iduser"],
             'id' => $this->input->post('id'),
@@ -46,7 +52,8 @@ class Detail extends CI_Controller
         );
         $this->cart->insert($datacart);
         if (isset($_POST['addcart'])) {
-            redirect('index.php/home');
+            $data['item'] = $this->fashions->getSelectedData($data['itemcategory'], $data['itemid']);
+            $this->load->view('pages/itemdetail.php', $data);
         } else if (isset($_POST['buynow'])) {
             redirect('index.php/shopcart');
         }

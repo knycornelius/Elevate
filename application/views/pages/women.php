@@ -35,7 +35,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 								?>
 							<div class="col-md-4 col-md4">
 								<div class="col-md1 simpleCart_shelfItem">
-									<a href="detail?category=e_men&id=<?php echo $womendata[$x]['id_item']; ?>">
+									<a href="detail?category=e_women&id=<?php echo $womendata[$x]['id_item']; ?>">
 										<img class="img-responsive" src="<?php echo base_url('assets/images/e_women/') . $womendata[$x]['image1'];
 																					?>" alt="" />
 									</a>

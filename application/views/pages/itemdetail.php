@@ -5,7 +5,6 @@ License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 <?= $header; ?>
-
 <body>
 	<div class="breadcrumbs">
 		<div class="container">
@@ -23,12 +22,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<div class="col-md-9">
 					<form method="post" action="detail/add_to_cart">
 						<div class="col-md-5 grid">
-							<div class="flexslider">
+							<div >
 								<div class="flex-viewport" style="overflow:hidden; position: relative;">
 									<ul class="slides" style="width:1000%; transition-duration: 0.6s; transform: translate3d(,0px,0px);">
 										<li data-thumb="<?= base_url('assets/images/' . $itemcategory . '/' . $row['image1']); ?>" class aria-hidden="true" style="width: 63px; float:left; display:block;">
 											<div class="thumb-image"> <img src="<?= base_url('assets/images/' . $itemcategory . '/' . $row['image1']);
-																				} ?>" data-imagezoom="true" class="img-responsive" draggable="false"> </div>
+																				 ?>" data-imagezoom="true" class="img-responsive" draggable="false"> </div>
 										</li>
 
 									</ul>
@@ -39,9 +38,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						</div>
 						<div class="col-md-7 single-top-in">
 							<div class="single-para simpleCart_shelfItem">
-								<h2><?= $row['item_name'] ?></h2>
+								<h2><?= $row['item_name']; ?></h2>
 
-								<label class="add-to item_price">$70.5</label>
+								<label class="add-to item_price">
+									<h4 style="font-weight: normal; color: black;"><?= "Rp." . number_format($row['price'], 0, ",", ".") ?></h4>
+								</label>
 
 								<div class="available">
 									<h6>Available Options :</h6>
@@ -79,9 +80,18 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							</div>
 						</div>
 						<div class="clearfix"> </div>
+						<br>
+						<br>
+						<br>
+						<br>
+						<div class="product-bottom">
+							<h3 class="cate">Related</h3>
+						</div>
 						<div class="content-top1">
 
-							<?php $x = 0;
+							<?php }
+							
+							$x = 0;
 							for ($i = 0; $i < 3; $i++) {
 
 								?>

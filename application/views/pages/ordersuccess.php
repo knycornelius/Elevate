@@ -109,7 +109,7 @@
                         <table>
                             <tr>
                                 <td class="col-sm-4 logo">
-                                    <h1><a href="<?php echo base_url('home'); ?>">Ele <span>vate</span></a></h1>
+                                    <h1>Ele<span>vate</span></h1>
                                     <h2>Pembayaran Telah Berhasil</h2>
                                 </td>
 

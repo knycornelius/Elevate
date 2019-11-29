@@ -1,25 +1,22 @@
-<!-- Bootstrap -->
-<link rel="stylesheet" type="text/css" href="<?php echo base_url('/assets/css/bootstrap-grid.min.css') ?>">
-<link rel="stylesheet" type="text/css" href="<?php echo base_url('/assets/css/bootstrap-reboot.min.css') ?>">
-<link rel="stylesheet" type="text/css" href="<?php echo base_url('/assets/css/bootstrap.min.css') ?>">
-<link rel="stylesheet" href="<?php echo base_url('/assets/datatables/css/dataTables.bootstrap.min.css'); ?>">
+<link href="<?php echo base_url('assets/'); ?>css/bootstrap-3.1.1.min.css" rel='stylesheet' type='text/css' />
+<link href="<?php echo base_url('assets/'); ?>css/style.css" rel="stylesheet" type="text/css" media="all" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="keywords" content="Youth Fashion Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+ <link href='//fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+ <link href='//fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+ <link href="<?php echo base_url('assets/'); ?>css/animate.min.css" rel="stylesheet">
+ <link href="<?php echo base_url('assets/'); ?>css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
+ <link href="<?php echo base_url('assets/'); ?>css/bootstrap-grid.min.css" rel="stylesheet">
+ <link href="<?php echo base_url('assets/'); ?>css/bootstrap-reboot.min.css" rel="stylesheet">
+  <link href="<?php echo base_url('assets/'); ?>css/dataTables.bootstrap.min.css" rel="stylesheet">
+   <link href="<?php echo base_url('assets/'); ?>css/flexslider.css" rel="stylesheet">
 
-<!-- Local CSS -->
-<link rel="stylesheet" type="text/css" href="<?php echo base_url('/assets/css/style.css') ?>">
-<link rel="stylesheet" type="text/css" href="<?php echo base_url('/assets/css/style__footer.css') ?>">
-<link rel="stylesheet" type="text/css" href="<?php echo base_url('/assets/css/cms.css') ?>">
 
-<link href="<?php echo base_url('/assets/css/bootstrap-3.1.1.min.css'); ?>" rel='stylesheet' type='text/css' />
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+   
+  
 
-<!-- Custom Theme files -->
-<!--theme-style-->
-<link href="<?php echo base_url('/assets/css/style.css'); ?>" rel="stylesheet" type="text/css" media="all" />
-<!--//theme-style-->
 
-<link href=//fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
-<link href=//fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
-<!-- start menu -->
 
-<link href="<?php echo base_url('/assets/css/animate.min.css'); ?>" rel="stylesheet">
-<script src="<?php echo base_url('/assets/js/wow.min.js'); ?>"></script>
+
