@@ -204,7 +204,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                                         <li><a href="<?= base_url('women'); ?>">Women</a></li>
                                                         <li><a href="<?= base_url('accessory'); ?>">Accessory</a></li>
                                                         <li><a href="<?= base_url('kids'); ?>">Kids</a></li>
-                                                        <li><a href="<?= base_url('footwear'); ?>"></a>Footwear</li>
+                                                        <li><a href="<?= base_url('footwear'); ?>">Footwear</a></li>
 
                                                     </ul>
                                                 </div>
