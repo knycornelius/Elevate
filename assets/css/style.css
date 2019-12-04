@@ -1099,15 +1099,17 @@ ul.kid-menu li,ul.cute li{
 	  width: 68%;
 }
 h6.best2 {
-  font-size: 0.9em;
+  font-size: 1em;
+  color:#fa03bb;
+ 
   line-height: 1.5em;
 }
 h6.best2 a{
- 	color:#B2B2B2;
+ 	color:#f54dcb71;
  	text-decoration: none;
 }
 h6.best2 a:hover{
-	color:#403b37;
+	color:#fa03bb;
 }
 span.price-in1 {
   font-size: 1.3em;

@@ -1,9 +1,3 @@
-<!--A Design by W3layouts 
-Author: W3layout
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
 <!DOCTYPE html>
 <html>
 <?= $header; ?>
@@ -52,14 +46,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 										<div class="cartData"><a href="shopcart/remove_item/<?php echo $row['rowid']; ?>">X</a></div>
 									</td>
 								</tr>
-								<input type="hidden" name="cart[<?php echo $row['category']; ?>][category]" value="<?php echo $row['category']; ?>">
 					<?php	}
 						}
 					} else {
 						echo "<tr class='col-12' style='color: grey'><b>No item ordered</b></tr>";
 					} ?>
 				</table>
-
 				<button type="submit" class="btn btn-dark ">PROCEED TO BUY</a>
 					<div class="clearfix"> </div>
 			</div>

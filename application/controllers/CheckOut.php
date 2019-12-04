@@ -15,17 +15,20 @@ class CheckOut extends CI_Controller
         if ($_SESSION['isLoggedIn'] == false) {
             redirect('index.php/login');
         }
+        $data['js'] = $this->load->view('include/javascript.php', NULL, TRUE);
+        $data['css'] = $this->load->view('include/css.php', NULL, TRUE);
         $data['user'] = $this->db->get_where('user', ['email' =>
         $this->session->userdata('email')])->row_array();
+        $data['header'] = $this->load->view('pages/header.php', $data, TRUE);
         //print_r($data['orang']);
         $data['item'] = $this->cart->contents();
-        $cart_info = $_POST['cart'];
+        // $cart_info = $_POST['cart'];
 
-        if (count($this->cart->contents()) == 0) {
-            echo "no such thing";
-        } else {
-            echo "r";
-        }
+        // if (count($this->cart->contents()) == 0) {
+        //     echo "no such thing";
+        // } else {
+        //     echo "r";
+        // }
         foreach ($this->cart->contents() as $cart) {
             $this->fashions->insert_trans($cart);
             $this->fashions->update_stock($cart);
@@ -34,13 +37,11 @@ class CheckOut extends CI_Controller
             $data['itemcategory'] =  $row['category'];
         }
 
-        print_r($data['itemcategory']);
         $data['transdetails'] = $this->fashions->getTransDet($data['itemcategory']);
-        $data['js'] = $this->load->view('include/javascript.php', NULL, TRUE);
-        $data['css'] = $this->load->view('include/css.php', NULL, TRUE);
-        $data['header'] = $this->load->view('pages/header.php', $data, TRUE);
+
+
         $data['footer'] = $this->load->view('pages/footer.php', NULL, TRUE);
-        $this->cart->destroy();
+        // $this->cart->destroy();
         $this->load->view('pages/ordersuccess.php', $data);
     }
 

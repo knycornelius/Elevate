@@ -1,9 +1,3 @@
-<!--A Design by W3layouts 
-Author: W3layout
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
 <!DOCTYPE html>
 <html>
 <?= $header; ?>
@@ -36,7 +30,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             <div class="col-md-4 col-md4">
                                 <div class="col-md1 simpleCart_shelfItem">
                                     <a href="detail?category=e_accessory&id=<?php echo $accdata[$x]['id_item']; ?>">
-                                        <img class="img-responsive" src="<?php echo base_url('assets/images/e_accessory/') . $accdata[$x]['image1'];?>" style="width: 250px; height: 250px" alt="" />
+                                        <img class="img-responsive" src="<?php echo base_url('assets/images/e_accessory/') . $accdata[$x]['image1']; ?>" style="width: 250px; height: 250px" alt="" />
                                     </a>
                                     <h3 style="height: 2.5rem"><a href="detail?category=e_accessory&id=<?php echo $accdata[$x]['id_item'] ?>"><?= $accdata[$x]['item_name']; ?></a></h3>
                                     <div class="price">

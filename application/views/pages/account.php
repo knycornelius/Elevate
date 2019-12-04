@@ -1,9 +1,3 @@
-<!--A Design by W3layouts 
-Author: W3layout
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
 <!DOCTYPE html>
 <html>
 <?= $header ?>
@@ -13,7 +7,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<div class="breadcrumbs">
 		<div class="container">
 			<ol class="breadcrumb breadcrumb1 animated wow slideInLeft animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: slideInLeft;">
-				<li><a href="<?php echo base_url('');?>"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Home</a></li>
+				<li><a href="<?php echo base_url(''); ?>"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Home</a></li>
 				<li class="active">Account</li>
 			</ol>
 		</div>
@@ -50,8 +44,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	</div>
 
 	<!--footer-->
-	
-	<?= $footer;?>
+
+	<?= $footer; ?>
 	<!--footer-->
 </body>
 

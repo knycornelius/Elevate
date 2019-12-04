@@ -10,6 +10,9 @@ class Products extends CI_Controller
         $this->session->userdata('email')])->row_array();
         $data['js'] = $this->load->view('include/javascript.php', NULL, TRUE);
         $data['css'] = $this->load->view('include/css.php', NULL, TRUE);
+        $data['header'] = $this->load->view('pages/header.php', $data, TRUE);
+        $data['footer'] = $this->load->view('pages/footer.php', NULL, TRUE);
+        $data['categories'] = $this->load->view('pages/category.php', NULL, TRUE);
 
         $this->load->view('pages/products.php', $data);
     }

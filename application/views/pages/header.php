@@ -3,8 +3,8 @@
 
 <head>
     <title>ELEVATE Indonesia: Belanja Fashion Online Terlengkap di Indonesia</title>
-    
-    
+
+
     <script type="application/x-javascript">
         addEventListener("load", function() {
             setTimeout(hideURLbar, 0);
@@ -15,7 +15,7 @@
         }
     </script>
 
-    
+
     <script>
         $(function() {
             $("#slider").responsiveSlides({
@@ -34,11 +34,11 @@
     <script>
         function logout() {
             sessionStorage.clear();
-            window.location.href = "<?php echo base_url()?>index.php/login/logout";
+            window.location.href = "<?php echo base_url() ?>index.php/login/logout";
         }
 
         function login() {
-            window.location.href = "<?php echo base_url()?>index.php/login";
+            window.location.href = "<?php echo base_url() ?>index.php/login";
 
         }
     </script>
@@ -48,8 +48,8 @@
         }
     </style>
     <?php
-        echo $css;
-        echo $js;
+    echo $css;
+    echo $js;
     ?>
 </head>
 
@@ -67,7 +67,7 @@
                             <h3>
                                 <div class="total">
                                     <!-- <span class="simpleCart_total"></span></div> -->
-                                <img src="<?php echo base_url('assets/'); ?>images/cart.png" alt="" />
+                                    <img src="<?php echo base_url('assets/'); ?>images/cart.png" alt="" />
                             </h3>
                         </a>
                         <p><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>
@@ -117,7 +117,7 @@
                                                         <li><a href="<?= base_url('index.php/women'); ?>">Women</a></li>
                                                         <li><a href="<?= base_url('index.php/accessory'); ?>">Accessory</a></li>
                                                         <li><a href="<?= base_url('index.php/kids'); ?>">Kids</a></li>
-                                                        <li><a href="<?= base_url('index.php/footwear'); ?>"></a>Footwear</li>
+                                                        <li><a href="<?= base_url('index.php/footwear'); ?>">Footwear</a></li>
                                                     </ul>
                                                 </div>
 
@@ -132,7 +132,7 @@
 
 
                                 <?php if ($user) { ?>
-                                    <li style="text-align:right;" class="nav-item dropdown " id="dropdownMenu1"><a href="#" class="nav-link dropdown-toggle user-action" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php echo $user['name']; ?><img src="<?= base_url('assets/images/' . $user['image']); ?>" style="width:30px;height:30px;" class="img-profile rounded-circle"></a>
+                                    <li style="text-align:right;" class="nav-item dropdown " id="dropdownMenu1"><a href="#" class="nav-link dropdown-toggle user-action" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php echo $user['name']; ?><img src="<? echo base_url('assets/images/' . $user['image']); ?>" style="width:30px;height:30px;" class="img-profile rounded-circle"></a>
 
                                         <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
 
@@ -163,8 +163,8 @@
 
                 <div class="clearfix"> </div>
                 <!---pop-up-box---->
-                
-                
+
+
                 <!---//pop-up-box---->
                 <div id="small-dialog" class="mfp-hide">
                     <div class="search-top">

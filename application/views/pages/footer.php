@@ -71,11 +71,11 @@
 			<div class="col-md-3 footer-bottom-cate animated wow fadeInLeft" data-wow-delay=".5s">
 				<h6>Categories</h6>
 				<ul>
-					<li><a href="<?= base_url('men'); ?>">Men</a></li>
-					<li><a href="<?= base_url('women'); ?>">Women</a></li>
-					<li><a href="<?= base_url('kids'); ?>">Kids</a></li>
-					<li><a href="<?= base_url('accessory'); ?>">Accessory</a></li>
-					<li><a href="<?= base_url('footwear'); ?>">Footwear</a></li>
+					<li><a href="<?= base_url('index.php/men'); ?>">Men</a></li>
+					<li><a href="<?= base_url('index.php/women'); ?>">Women</a></li>
+					<li><a href="<?= base_url('index.php/kids'); ?>">Kids</a></li>
+					<li><a href="<?= base_url('index.php/accessory'); ?>">Accessory</a></li>
+					<li><a href="<?= base_url('index.php/footwear'); ?>">Footwear</a></li>
 
 				</ul>
 			</div>

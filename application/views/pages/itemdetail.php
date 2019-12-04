@@ -1,10 +1,26 @@
-<!--A Design by W3layouts 
-Author: W3layout
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
 <?= $header; ?>
+<style>
+	.vertical-alignment-helper {
+		display: table;
+		height: 100%;
+		width: 100%;
+	}
+
+	.vertical-align-center {
+		/* To center vertically */
+		display: table-cell;
+		vertical-align: middle;
+	}
+
+	.modal-content {
+		/* Bootstrap sets the size of the modal in the modal-dialog class, we need to inherit it */
+		width: inherit;
+		height: inherit;
+		/* To center horizontally */
+		margin: 0 auto;
+	}
+</style>
+
 <body>
 	<div class="breadcrumbs">
 		<div class="container">
@@ -22,12 +38,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<div class="col-md-9">
 					<form method="post" action="detail/add_to_cart">
 						<div class="col-md-5 grid">
-							<div >
+							<div>
 								<div class="flex-viewport" style="overflow:hidden; position: relative;">
-									<ul class="slides" style="width:1000%; transition-duration: 0.6s; transform: translate3d(,0px,0px);">
+									<ul class="slides" style="width:1000%; transition-duration: 0.6s; ">
 										<li data-thumb="<?= base_url('assets/images/' . $itemcategory . '/' . $row['image1']); ?>" class aria-hidden="true" style="width: 63px; float:left; display:block;">
 											<div class="thumb-image"> <img src="<?= base_url('assets/images/' . $itemcategory . '/' . $row['image1']);
-																				 ?>" data-imagezoom="true" class="img-responsive" draggable="false"> </div>
+																					?>" data-imagezoom="true" class="img-responsive" draggable="false"> </div>
 										</li>
 
 									</ul>
@@ -74,7 +90,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 									<input type="hidden" name="itemcategory" value="<?php echo $itemcategory; ?>">
 								</div>
 
-								<input type="submit" name="addcart" class="cart item_add" value="Add to Cart">
+								<a data-toggle="modal" data-target="#myModal" id="addcart" name="addcart" class="cart item_add" value="Add to Cart"></a>
 								<input type="submit" name="buynow" class="cart item_add" value="Buy Now">
 
 							</div>
@@ -89,31 +105,49 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						</div>
 						<div class="content-top1">
 
-							<?php }
-							
-							$x = 0;
-							for ($i = 0; $i < 3; $i++) {
+						<?php }
 
-								?>
-								<div class="col-md-4 col-md4">
-									<div class="col-md1 simpleCart_shelfItem">
-										<a href="detail?category=<?= $itemcategory; ?>&id=<?php echo $cat[$x]['id_item']; ?>">
-											<img class="img-responsive" src="<?= base_url('assets/images/' . $itemcategory . '/' . $cat[$x]['image1']);
-																					?>" alt="" />
-										</a>
-										<h3><a href="detail?category=<?= $itemcategory; ?>&id=<?php echo $cat[$x]['id_item']; ?>"><?php echo $cat[$x]['item_name']; ?></a></h3>
-										<div class="price">
-											<h5 class="item_price"><?php echo "Rp." . number_format($cat[$x]['price'], 0, ",", "."); ?></h5>
-											<a href="#" class="item_add">Add To Cart</a>
-											<div class="clearfix"> </div>
-										</div>
+						$x = 0;
+						for ($i = 0; $i < 3; $i++) {
 
+							?>
+							<div class="col-md-4 col-md4">
+								<div class="col-md1 simpleCart_shelfItem">
+									<a href="detail?category=<?= $itemcategory; ?>&id=<?php echo $cat[$x]['id_item']; ?>">
+										<img class="img-responsive" src="<?= base_url('assets/images/' . $itemcategory . '/' . $cat[$x]['image1']);
+																				?>" alt="" />
+									</a>
+									<h3><a href="detail?category=<?= $itemcategory; ?>&id=<?php echo $cat[$x]['id_item']; ?>"><?php echo $cat[$x]['item_name']; ?></a></h3>
+									<div class="price">
+										<h5 class="item_price"><?php echo "Rp." . number_format($cat[$x]['price'], 0, ",", "."); ?></h5>
+										<a href="#" class="item_add">Add To Cart</a>
+										<div class="clearfix"> </div>
 									</div>
-								</div><?php $x++;
-										} ?>
+
+								</div>
+							</div><?php $x++;
+									} ?>
 
 
-							<div class="clearfix"> </div>
+						<div class="clearfix"> </div>
+						</div>
+						<div class="modal fade" id="myModal" role="dialog" tabindex="-1">
+							<div class="vertical-alignment-helper">
+								<div class="modal-dialog modal-sm vertical-align-center">
+
+									<div class="modal-content">
+										<form method="post" action="<?php echo base_url('index.php/shopcart') ?>">
+
+											<div class="modal-body">
+												Selamat! Barang Anda sudah ada di Shopping Cart
+											</div>
+											<div class="modal-footer">
+
+												<button type="submit" name="addcart" class="btn btn-sm btn-default">OK</button>
+											</div>
+									</div>
+								</div>
+							</div>
 						</div>
 				</div>
 				<!----->
