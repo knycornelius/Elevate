@@ -13,31 +13,51 @@ class Fashions extends CI_Model
     }
     public function getWomenData()
     {
-        $query = $this->db->query("SELECT * FROM e_women");
+        $query = $this->db->query("select e.id_item 'id_item', e.item_name 'item_name', e.discount 'discount',
+        e.disc_sd 'disc_sd', e.disc_ed 'disc_ed', e.image1 'image1', e.image2 'image2', e.image3 'image3', 
+        sz.stock 'stock', sz.size 'size', sz.price 'price'
+        from e_women e, size_women sz
+        where e.id_item = sz.id AND sz.size = 'M';");
 
         return $query->result_array();
     }
     public function getMenData()
     {
-        $query = $this->db->query("SELECT * FROM e_men");
+        $query = $this->db->query("select e.id_item 'id_item', e.item_name 'item_name', e.discount 'discount',
+        e.disc_sd 'disc_sd', e.disc_ed 'disc_ed', e.image1 'image1', e.image2 'image2', e.image3 'image3', 
+        sz.stock 'stock', sz.size 'size', sz.price 'price'
+        from e_men e, size_men sz
+        where e.id_item = sz.id AND sz.size = 'M';");
 
         return $query->result_array();
     }
     public function getKidsData()
     {
-        $query = $this->db->query("SELECT * FROM e_kids");
+        $query = $this->db->query("select e.id_item 'id_item', e.item_name 'item_name', e.discount 'discount',
+        e.disc_sd 'disc_sd', e.disc_ed 'disc_ed', e.image1 'image1', e.image2 'image2', e.image3 'image3', 
+        sz.stock 'stock', sz.size 'size', sz.price 'price'
+        from e_kids e, size_kids sz
+        where e.id_item = sz.id AND sz.size = 'M';");
 
         return $query->result_array();
     }
     public function getFootwearData()
     {
-        $query = $this->db->query("SELECT * FROM e_footwear");
+        $query = $this->db->query("select e.id_item 'id_item', e.item_name 'item_name', e.discount 'discount',
+        e.disc_sd 'disc_sd', e.disc_ed 'disc_ed', e.image1 'image1', e.image2 'image2', e.image3 'image3', 
+        sz.stock 'stock', sz.size 'size', sz.price 'price'
+        from e_footwear e, size_footwear sz
+        where e.id_item = sz.id AND sz.size = 'M';");
 
         return $query->result_array();
     }
     public function getAccessoriesData()
     {
-        $query = $this->db->query("SELECT * FROM e_accessory");
+        $query = $this->db->query("select e.id_item 'id_item', e.item_name 'item_name', e.discount 'discount',
+        e.disc_sd 'disc_sd', e.disc_ed 'disc_ed', e.image1 'image1', e.image2 'image2', e.image3 'image3', 
+        sz.stock 'stock', sz.size 'size', sz.price 'price'
+        from e_accessory e, size_accessory sz
+        where e.id_item = sz.id AND sz.size = 'M';");
 
         return $query->result_array();
     }
