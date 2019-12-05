@@ -50,7 +50,7 @@ class Login extends CI_Controller
                         $_SESSION["email"] = $user['email'];
                         $_SESSION["address"] = $user['alamat'];
                         $_SESSION["notelp"] = $user['no_telp'];
-                        redirect('cms');
+                        redirect('index.php/cms');
                     } else {
                         echo  "sdsdfsdf";
                         $_SESSION["privilege"] = "user";
@@ -59,7 +59,7 @@ class Login extends CI_Controller
                         $_SESSION["email"] = $user['email'];
                         $_SESSION["address"] = $user['alamat'];
                         $_SESSION["notelp"] = $user['no_telp'];
-                        redirect('home');
+                        redirect('index.php/home');
                     }
                 } else {
                     $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Wrong password!</div>');

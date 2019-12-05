@@ -36,6 +36,30 @@
         width: 35%;
     }
 
+    .contain__header {
+        text-align: center;
+        border-bottom: 1px solid black;
+    }
+
+    .contain__header__2 {
+        display: flex;
+        border-bottom: 1px solid black;
+    }
+
+    .contain__header__2 > div {
+        padding-left: 100px;
+    }
+
+    .contain__content {
+        display: flex;
+        padding: 25px 0;
+    }
+
+    .contain__content > div {
+        width: 125px;
+        padding-left: 110px;
+    }
+
     .cms_footer {
         height: 30px;
         background: black;
@@ -45,6 +69,9 @@
         justify-content: center;
         align-items: center;
         font-family: Arial,Helvetica,sans-serif;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
     }
 
     .text {
@@ -67,10 +94,16 @@
         width: 40px;
         height: 50px;
     }
+    .outer {
+        display: flex;
+    }
+    .btn {
+        margin-left: 25px;
+    }
     </style>
     <script>
     function goTo(category) {
-        window.location.href = "http://localhost/elevate/index.php/cms?category=" + category;
+        window.location.href = "http://localhost/bose/index.php/cms?category=" + category;
     }
     </script>
 </head>
@@ -104,14 +137,6 @@
             <div class="content">:  <?php echo "<img src = '".base_url($imagePath.$row['image3'])."'>"; ?></div>
         </div>
         <div class="id">
-            <div class="text">Stock </div>
-            <div class="content">:  <?php echo $row['stock']; ?></div>
-        </div>
-        <div class="id">
-            <div class="text">Price </div>
-            <div class="content">:  <?php echo $row['price']; ?></div>
-        </div>
-        <div class="id">
             <div class="text">Discount </div>
             <div class="content">:  <?php echo $row['discount']; ?></div>
         </div>
@@ -123,18 +148,46 @@
             <div class="text">Discount End Date </div>
             <div class="content">:  <?php echo $row['disc_ed']; ?></div>
         </div>
-        <div class="id">
-            <div class="text">Sub Category 1 </div>
-            <div class="content">:  <?php echo $row['sc1']; ?></div>
-        </div>
-        <div class="id">
-            <div class="text">Sub Category 2 </div>
-            <div class="content">:  <?php echo $row['sc2']; ?></div>
-        </div>
     <?php } ?>
     </div>
-    <button onclick="goTo('<?php echo $_GET['category']; ?>')" class="btn  btn-primary" style="margin-top: 15px">Back</button>
+    <div class="contain" style="margin-top: 100px; margin-left: 25px;">
+        <div class="contain__header">Available Size</div>
+        <div class="contain__header__2">
+            <div>Size</div>
+            <div>Stock</div>
+            <div>Price</div>
+        </div>
+        <div class="contain__content">
+            <div>S</div>
+            <?php foreach($S as $row) { ?>
+            <div><?php echo $row['Stock']; ?></div>
+            <div><?php echo $row['Price']; ?></div>
+            <?php } ?>
+        </div>
+        <div class="contain__content">
+            <div>M</div>
+            <?php foreach($M as $row) { ?>
+            <div><?php echo $row['Stock']; ?></div>
+            <div><?php echo $row['Price']; ?></div>
+            <?php } ?>
+        </div>
+        <div class="contain__content">
+            <div>L</div>
+            <?php foreach($L as $row) { ?>
+            <div><?php echo $row['Stock']; ?></div>
+            <div><?php echo $row['Price']; ?></div>
+            <?php } ?>
+        </div>
+        <div class="contain__content">
+            <div>XL</div>
+            <?php foreach($XL as $row) { ?>
+            <div><?php echo $row['Stock']; ?></div>
+            <div><?php echo $row['Price']; ?></div>
+            <?php } ?>
+        </div>
     </div>
+    </div>
+    <button onclick="goTo('<?php echo $_GET['category']; ?>')" class="btn  btn-primary" style="margin-top: 15px">Back</button>
     <div class="cms_footer">
         Copyright Elevate - 2019
     </div>

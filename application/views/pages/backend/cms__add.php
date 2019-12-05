@@ -83,7 +83,7 @@
     </style>
     <script>
     function goTo(category) {
-        window.location.href = "http://localhost/elevate/index.php/cms?category=" + category;
+        window.location.href = "http://localhost/bose/index.php/cms?category=" + category;
     }
     </script>
 </head>
@@ -147,7 +147,7 @@
                 </select>
             </div>
             <button type="submit" class="btn btn-primary success">Add Item</button>
-            <button type="cancel" class="btn btn-danger"><a href="http://localhost/elevate/index.php/cms?category=<?php echo $_GET['category']; ?>">Cancel</a></button>
+            <button type="cancel" class="btn btn-danger"><a href="http://localhost/bose/index.php/cms?category=<?php echo $_GET['category']; ?>">Cancel</a></button>
         </form>
     </div>
     </div>

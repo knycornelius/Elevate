@@ -76,7 +76,7 @@
         <h1>Content Management System</h1>
     </div>
     <div class="addItems">
-        <a href="http://localhost/elevate/index.php/cms/addPage?category=<?php echo $_GET['category']; ?>"><button class="btn btn-primary">Add Item</button></a>
+        <a href="http://localhost/bose/index.php/cms/addPage?category=<?php echo $_GET['category']; ?>"><button class="btn btn-primary">Add Item</button></a>
     </div>
     <div class="row" style="margin-top: 100px;">
         <table id="myTable" class="table table-striped table-bordered">
@@ -87,13 +87,9 @@
                     <th>Image 1</th>
                     <th>Image 2</th>
                     <th>Image 3</th>
-                    <th>Stock</th>
-                    <th>Price</th>
                     <th>Discount</th>
                     <th>Discount Start Date</th>
                     <th>Discount End Date</th>
-                    <th>Sub Category 1</th>
-                    <th>Sub Category 2</th>
                     <th>Action</th>
                 </tr>
             </thead>
@@ -111,13 +107,9 @@
                         echo "<td><img src='" . base_url($imagePath.$row['image1']) . "'></td>";
                         echo "<td><img src='" . base_url($imagePath.$row['image2']) . "'></td>";
                         echo "<td><img src='" . base_url($imagePath.$row['image3']) . "'></td>";
-                        echo "<td>" .$row['stock'] ."</td>";
-                        echo "<td>" .$row['price'] ."</td>";
                         echo "<td>" .$row['discount'] ."</td>";
                         echo "<td>" .$row['disc_sd'] ."</td>";
                         echo "<td>" .$row['disc_ed'] ."</td>";
-                        echo "<td>" .$row['sc1'] ."</td>";
-                        echo "<td>" .$row['sc2'] ."</td>";
                         echo "<td class='aksi'>";
                             echo "<a href='".base_url("index.php/cms/ShowDetail?category=$category&id=$id")."'
                                     style='margin-right:10px;color:rgb(0,200,255);'>";

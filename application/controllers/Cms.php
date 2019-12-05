@@ -24,6 +24,10 @@ class Cms extends CI_Controller {
         $data['js'] = $this->load->view('include/javascript.php', NULL, TRUE);
         $data['css'] = $this->load->view('include/css.php', NULL, TRUE);
         $data['output'] = $this->CmsModel->getDetail($_GET['category'], $_GET['id']);
+        $data['S'] = $this->CmsModel->getPrice($_GET['category'], $_GET['id'], "S");
+        $data['M'] = $this->CmsModel->getPrice($_GET['category'], $_GET['id'], "M");
+        $data['L'] = $this->CmsModel->getPrice($_GET['category'], $_GET['id'], "L");
+        $data['XL'] = $this->CmsModel->getPrice($_GET['category'], $_GET['id'], "XL");
         $this->load->view('pages/backend/cms__detail', $data);
     }
 

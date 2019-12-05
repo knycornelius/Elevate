@@ -27,7 +27,7 @@
 	}
 
 	function goTo(category) {
-		window.location.href = "http://localhost/elevate/index.php/cms?category=" + category;
+		window.location.href = "http://localhost/bose/index.php/cms?category=" + category;
 	}
 	</script>
 </head>

@@ -23,6 +23,16 @@
             return $query->result_array();
         }
 
+        public function getPrice($category, $id, $size)
+        {
+            $table = "e_".$category;
+            $tablesz = "size_".$category;
+
+            $query = $this->db->query("SELECT * FROM $tablesz WHERE id = '".$id."' AND size = '".$size."'");
+            
+            return $query->result_array();
+        }
+
         public function delete($category, $id) 
         {
             $table = "e_".$category;
