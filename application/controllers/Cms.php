@@ -53,13 +53,9 @@ class Cms extends CI_Controller {
             'image1' => $link1,
             'image2' => $link2,
             'image3' => $link3,
-            'stock' => $this->input->post('Stock'),
-            'price' => $this->input->post('Price'),
             'discount' => $this->input->post('Discount'),
             'disc_sd' => $this->input->post('DiscSd'),
-            'disc_ed' => $this->input->post('DiscEd'),
-            'sc1' => $this->input->post('Sc1'),
-            'sc2' => $this->input->post('Sc2')
+            'disc_ed' => $this->input->post('DiscEd')
         );
 
         $category = $id;
@@ -75,7 +71,11 @@ class Cms extends CI_Controller {
         $this->upload->do_upload('Image3');
         
         $this->CmsModel->add($category, $values);
-        redirect('http://localhost/elevate/index.php/cms?category='. $category);
+        $this->CmsModel->addPrice($category, $itemid, "S", $this->input->post('PriceS'), $this->input->post('StockS'));
+        $this->CmsModel->addPrice($category, $itemid, "M", $this->input->post('PriceM'), $this->input->post('StockM'));
+        $this->CmsModel->addPrice($category, $itemid, "L", $this->input->post('PriceL'), $this->input->post('StockL'));
+        $this->CmsModel->addPrice($category, $itemid, "XL", $this->input->post('PriceXL'), $this->input->post('StockXL'));
+        redirect(base_url()."index.php/cms?category=". $category);
     }
 
     public function updatePage($param) {
@@ -119,11 +119,11 @@ class Cms extends CI_Controller {
         if($_FILES['Image3']['name']) $this->upload->do_upload('Image3');
 
         $this->CmsModel->update($category, $values);
-        redirect('http://localhost/elevate/index.php/cms?category='. $category);
+        redirect(base_url()."index.php/cms?category=". $category);
     }
     
     public function delete($param) {
         $this->CmsModel->delete($_GET['category'], $param);
-        redirect('http://localhost/elevate/index.php/cms?category='. $_GET['category']);
+        redirect(base_url()."index.php/cms?category=". $_GET['category']);
     }
 }

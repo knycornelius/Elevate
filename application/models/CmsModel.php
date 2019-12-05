@@ -36,8 +36,10 @@
         public function delete($category, $id) 
         {
             $table = "e_".$category;
+            $tablesz = "size_".$category;
 
             $query = $this->db->query("DELETE FROM $table WHERE id_item = '".$id."'");
+            $query = $this->db->query("DELETE FROM $tablesz WHERE id = '".$id."'");
         }
 
         public function add($category, $values)
@@ -45,6 +47,13 @@
             $table = "e_".$category;
 
             $this->db->insert($table, $values);
+        }
+
+        public function addPrice($category, $id, $size, $price, $stock)
+        {
+            $table = "size_".$category;
+
+            $query = $this->db->query("INSERT INTO $table VALUES('$id', $stock, '$size', $price);");
         }
 
         public function update($category, $value)

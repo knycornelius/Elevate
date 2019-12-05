@@ -36,6 +36,11 @@
         width: 35%;
     }
 
+    .contain__size {
+        display: flex;
+        justify-content: space-between;
+    }
+
     .cms_footer {
         height: 30px;
         background: black;
@@ -110,14 +115,50 @@
                 <div>Image 3 </div>
                 <input type="file" class="form-control" name="Image3" required />
             </div>
-            <div class="form-group">
-                <div>Stock </div>
-                <input type="text" class="form-control" name="Stock" required />
+            <div class="contain__size">
+                <div class="form-group">
+                    <div>Stock (Size S) </div>
+                    <input type="text" class="form-control" name="StockS" required />
+                </div>
+                <div class="form-group">
+                    <div>Price (Size S)</div>
+                    <input type="text" class="form-control" name="PriceS" required />
+                </div>
             </div>
-            <div class="form-group">
-                <div>Price </div>
-                <input type="text" class="form-control" name="Price" required />
+
+            <div class="contain__size">
+                <div class="form-group">
+                    <div>Stock (Size M) </div>
+                    <input type="text" class="form-control" name="StockM" required />
+                </div>
+                <div class="form-group">
+                    <div>Price (Size M)</div>
+                    <input type="text" class="form-control" name="PriceM" required />
+                </div>
             </div>
+
+            <div class="contain__size">
+                <div class="form-group">
+                    <div>Stock (Size L) </div>
+                    <input type="text" class="form-control" name="StockL" required />
+                </div>
+                <div class="form-group">
+                    <div>Price (Size L)</div>
+                    <input type="text" class="form-control" name="PriceL" required />
+                </div>
+            </div>
+
+            <div class="contain__size">
+                <div class="form-group">
+                    <div>Stock (Size XL) </div>
+                    <input type="text" class="form-control" name="StockXL" required />
+                </div>
+                <div class="form-group">
+                    <div>Price (Size XL)</div>
+                    <input type="text" class="form-control" name="PriceXL" required />
+                </div>
+            </div>
+
             <div class="form-group">
                 <div>Discount </div>
                 <input type="text" class="form-control" name="Discount" required />
@@ -129,22 +170,6 @@
             <div class="form-group">
                 <div>Discount End Date </div>
                 <input type="date" class="form-control" name="DiscEd" required />
-            </div>
-            <div class="form-group">
-                <div>Sub Category 1 </div>
-                <select name="Sc1">
-                <?php foreach($sub1 as $arr) {
-                    echo "<option value='".$arr['sc_name']."'>".$arr['sc_name']."</option>"; } 
-                ?>
-                </select>
-            </div>
-            <div class="form-group">
-                <div>Sub Category 2 </div>
-                <select name="Sc2">
-                <?php foreach($sub2 as $arr) {
-                    echo "<option value='".$arr['sc_name2']."'>".$arr['sc_name2']."</option>"; } 
-                ?>
-                </select>
             </div>
             <button type="submit" class="btn btn-primary success">Add Item</button>
             <button type="cancel" class="btn btn-danger"><a href="http://localhost/bose/index.php/cms?category=<?php echo $_GET['category']; ?>">Cancel</a></button>
