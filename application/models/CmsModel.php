@@ -55,12 +55,19 @@
 
             $query = $this->db->query("INSERT INTO $table VALUES('$id', $stock, '$size', $price);");
         }
-
+        
         public function update($category, $value)
         {
             $table = "e_".$category;
-
+            
             $this->db->replace($table, $value);
+        }
+        
+        public function updatePrice($category, $id, $size, $price, $stock)
+        {
+            $table = "size_".$category;
+
+            $query = $this->db->query("UPDATE $table SET Price = $price, Stock = $stock WHERE id = '$id' AND size = '$size'");
         }
 
         public function getLastID($cat, $id, $category)

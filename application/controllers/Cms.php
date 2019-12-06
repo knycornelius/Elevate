@@ -80,6 +80,12 @@ class Cms extends CI_Controller {
 
     public function updatePage($param) {
         $data['output'] = $this->CmsModel->getDetail($_GET['category'], $param);
+
+        $data['S'] = $this->CmsModel->getPrice($_GET['category'], $param, "S");
+        $data['M'] = $this->CmsModel->getPrice($_GET['category'], $param, "M");
+        $data['L'] = $this->CmsModel->getPrice($_GET['category'], $param, "L");
+        $data['XL'] = $this->CmsModel->getPrice($_GET['category'], $param, "XL");
+
         $data['sub1'] = $this->CmsModel->getSub("sc_name", $_GET['category']);
         $data['sub2'] = $this->CmsModel->getSub("sc_name2", $_GET['category']);
         $data['js'] = $this->load->view('include/javascript.php', NULL, TRUE);
@@ -99,13 +105,9 @@ class Cms extends CI_Controller {
             'image1' => $link1,
             'image2' => $link2,
             'image3' => $link3,
-            'stock' => $this->input->post('Stock'),
-            'price' => $this->input->post('Price'),
             'discount' => $this->input->post('Discount'),
             'disc_sd' => $this->input->post('DiscSd'),
-            'disc_ed' => $this->input->post('DiscEd'),
-            'sc1' => $this->input->post('Sc1'),
-            'sc2' => $this->input->post('Sc2')
+            'disc_ed' => $this->input->post('DiscEd')
         );
 
         $config['upload_path'] = './assets/images/e_'.$category;
@@ -119,6 +121,10 @@ class Cms extends CI_Controller {
         if($_FILES['Image3']['name']) $this->upload->do_upload('Image3');
 
         $this->CmsModel->update($category, $values);
+        $this->CmsModel->updatePrice($category, $id, "S", $this->input->post('PriceS'), $this->input->post('StockS'));
+        $this->CmsModel->updatePrice($category, $id, "M", $this->input->post('PriceM'), $this->input->post('StockM'));
+        $this->CmsModel->updatePrice($category, $id, "L", $this->input->post('PriceL'), $this->input->post('StockL'));
+        $this->CmsModel->updatePrice($category, $id, "XL", $this->input->post('PriceXL'), $this->input->post('StockXL'));
         redirect(base_url()."index.php/cms?category=". $category);
     }
     
