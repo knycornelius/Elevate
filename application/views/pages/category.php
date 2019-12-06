@@ -1,8 +1,10 @@
 <div class=" rsidebar span_1_of_left">
     <h3 class="cate">Categories</h3>
-    <ul class="menu-drop">
+    <ul class="drop-menu">
 
-        <li class="item4"><a href="<?php echo base_url('index.php/men'); ?>">Men </a>
+        <li>
+            <a href="<?php echo base_url('index.php/men'); ?>">Men
+            </a>
 
         </li>
 

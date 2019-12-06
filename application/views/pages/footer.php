@@ -1,46 +1,3 @@
-<!-- <div class="footer">
-    <div>
-        <h1>CATEGORIES</h1>
-        <p>Women</p>
-        <p>Men</p>
-        <p>Accessories</p>
-        <p>Footwear</p>
-    </div>
-    <div>
-        <h1>HELP</h1>
-        <p>Track Order</p>
-        <p>Returns</p>
-        <p>Shipping</p>
-        <p>FAQ</p>
-    </div>
-    <div>
-        <h1>GET IN TOUCH</h1>
-        <p>
-            Any questions? Let us know in store at 8th floor, 
-            379 Hudson St, New York, NY 10018 or call us on
-            (+1) 96 716 6879
-        </p>
-        <div class="social__media">
-            <img src="
-                <?php echo base_url('/assets/logo/facebook.png'); ?>
-            ">
-            <img src="
-                <?php echo base_url('/assets/logo/insta.png'); ?>
-            ">
-            <img src="
-                <?php echo base_url('/assets/logo/pinte.png'); ?>
-            ">
-        </div>
-    </div>
-    <div>
-        <h1>NEWSLETTER</h1>
-        <form action="index.php/Home/subscribe" method="post">
-            <input type="text" name="email" placeholder="example@gmail.com" />
-            <br/>
-            <button type="submit" value="SUBSCRIBE" class="subsButton">SUBSCRIBE</button>
-        </form>
-    </div>
-</div> -->
 <div class="footer">
 	<div class="container">
 		<div class="footer-top">
@@ -95,7 +52,7 @@
 				<h6>GET IN TOUCH</h6>
 				<ul>
 					<li><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>Address :379 Hudson St, <span>New York.</span></li>
-					<li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i>Email : <a href="mailto:info@example.com">test123@gmail.com</a></li>
+					<li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i>Email : <a href="mailto:test123@gmail.com">test123@gmail.com</a></li>
 					<li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>Phone : (+1) 96 716 6879</li>
 				</ul>
 			</div>

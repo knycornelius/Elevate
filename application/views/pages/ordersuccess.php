@@ -7,11 +7,12 @@
             .invoice-box {
                 max-width: 800px;
                 margin: auto;
+                margin-bottom: 100px;
                 padding: 30px;
                 border: 1px solid #eee;
                 box-shadow: 0 0 10px rgba(0, 0, 0, .15);
                 font-size: 16px;
-                line-height: 24px;
+
                 font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
                 color: #555;
             }
@@ -110,13 +111,14 @@
                             <tr>
                                 <td class="col-sm-4 logo">
                                     <h1>Ele<span>vate</span></h1>
-                                    <h2>Pembayaran Telah Berhasil</h2>
+                                    <h2>Proses Order Telah Berhasil</h2>
                                 </td>
 
                                 <?php foreach ($transdetails as $trans) { ?>
                                     <td>
 
-                                        Created: <?= $trans['transaction_date']; ?><br>
+                                        Created: <?= $trans['transaction_date'];
+                                                    } ?><br>
                                     </td>
                             </tr>
                         </table>
@@ -151,27 +153,28 @@
                         Price
                     </td>
                 </tr>
+                <?php foreach ($transdetails as $trans) { ?>
+                    <tr class="item">
+                        <td>
+                            <?=
+                                    $trans['item_name']; ?>
+                        </td>
 
-                <tr class="item">
-                    <td>
-                        <?= $trans['item_name']; ?>
-                    </td>
-
-                    <td>
-                        <?= "Rp." . number_format($trans['price'], 0, ",", "."); ?>
-                    </td>
-                </tr>
+                        <td>
+                            <?= "Rp." . number_format($trans['price'], 0, ",", "."); ?>
+                        </td>
+                    </tr>
 
 
 
-                <tr class="total">
-                    <td></td>
+                    <tr class="total">
+                        <td></td>
 
-                    <td>
-                    <?= "Rp." . number_format($trans['price'], 0, ",", ".");
-                    } ?>
-                    </td>
-                </tr>
+                        <td>
+                        <?= "Rp." . number_format($trans['price'], 0, ",", ".");
+                        } ?>
+                        </td>
+                    </tr>
             </table>
         </div>
 

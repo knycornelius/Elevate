@@ -8,7 +8,11 @@ class Fashions extends CI_Model
     }
     public function get_item_category($category)
     {
-        $query = $this->db->query("SELECT * FROM $category");
+        $query = $this->db->query("select e.id_item 'id_item', e.item_name 'item_name', e.discount 'discount',
+        e.disc_sd 'disc_sd', e.disc_ed 'disc_ed', e.image1 'image1', e.image2 'image2', e.image3 'image3', 
+        sz.stock 'stock', sz.size 'size', sz.price 'price'
+        from e_" . $category . " e, size_" . $category . " sz
+        where e.id_item = sz.id AND sz.size = 'M';");
         return $query->result_array();
     }
     public function getWomenData()
@@ -61,9 +65,14 @@ class Fashions extends CI_Model
 
         return $query->result_array();
     }
-    public function getSelectedData($category, $id)
+    public function getSelectedData($category, $id, $size)
     {
-        $query = $this->db->query("SELECT * FROM $category WHERE id_item = '$id'");
+
+        $query = $this->db->query("select e.id_item 'id_item', e.item_name 'item_name', e.discount 'discount',
+        e.disc_sd 'disc_sd', e.disc_ed 'disc_ed', e.image1 'image1', e.image2 'image2', e.image3 'image3', 
+        sz.stock 'stock', sz.size 'size', sz.price 'price'
+        from e_" . $category . " e, size_" . $category . " sz
+        where e.id_item ='" . $id . "' AND sz.id='" . $id . "' AND sz.size='" . $size . "'");
         return $query->result_array();
     }
     public function get($id)
@@ -122,12 +131,13 @@ class Fashions extends CI_Model
     }
 
 
-    public function getTransDet($cat)
+    public function getTransDet($cat, $byk, $id)
     {
         $this->db->select('*');
         $this->db->from('e_transaction_details');
-        $this->db->join('e_transaction', 'e_transaction.id_transaction = e_transaction_details.id_transaction');
+        $this->db->join('e_transaction', 'e_transaction.id_transaction = e_transaction_details.id_transaction ');
         $this->db->join($cat, $cat . '.id_item = e_transaction_details.id_item');
+        $this->db->limit($byk);
         $query = $this->db->get();
         return $query->result_array();
     }
@@ -136,12 +146,12 @@ class Fashions extends CI_Model
 
         $category = $data['category'];
         $idbrg = $data['id'];
-        $stockdata = $this->db->query("SELECT stock from $category WHERE id_item = '$idbrg'");
+        $stockdata = $this->db->query("SELECT stock from size_$category WHERE id_item = '$idbrg'");
         $stocked = $stockdata->result_array();
         foreach ($stocked as $row) {
             $stocks = $row['stock'] - $data['qty'];
         }
 
-        $this->db->query("UPDATE $category SET stock = $stocks WHERE id_item = '$idbrg' ");
+        $this->db->query("UPDATE size_$category SET stock = $stocks WHERE id_item = '$idbrg' ");
     }
 }

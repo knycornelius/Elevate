@@ -230,60 +230,60 @@
 							<img class="img-responsive" src="<?php echo base_url('assets/'); ?>images/pi9.png" alt="" />
 						</a>
 						<h3><a href="single.html">Trousers</a></h3>
-						<<!-- div class="price">
+						<!-- div class="price">
 							<h5 class="item_price">$300</h5>
 
 
 							<div class="clearfix"> </div>
 					</div> -->
 
+					</div>
 				</div>
-			</div>
-			<div class="col-md-3 col-md2 animated wow fadeInLeft" data-wow-delay=".5s">
-				<div class="col-md1 simpleCart_shelfItem">
-					<a href="single.html">
-						<img class="img-responsive" src="<?php echo base_url('assets/'); ?>images/pi10.png" alt="" />
-					</a>
-					<h3><a href="single.html">Formal</a></h3>
-					<!-- <div class="price">
+				<div class="col-md-3 col-md2 animated wow fadeInLeft" data-wow-delay=".5s">
+					<div class="col-md1 simpleCart_shelfItem">
+						<a href="single.html">
+							<img class="img-responsive" src="<?php echo base_url('assets/'); ?>images/pi10.png" alt="" />
+						</a>
+						<h3><a href="single.html">Formal</a></h3>
+						<!-- <div class="price">
 							<h5 class="item_price">$450</h5>
 
 							<div class="clearfix"> </div>
 						</div> -->
 
+					</div>
 				</div>
-			</div>
-			<div class="col-md-3 col-md2 animated wow fadeInRight" data-wow-delay=".5s">
-				<div class="col-md1 simpleCart_shelfItem">
-					<a href="single.html">
-						<img class="img-responsive" src="<?php echo base_url('assets/'); ?>images/pi11.png" alt="" />
-					</a>
-					<h3><a href="single.html">Trousers</a></h3>
-					<!-- <div class="price">
+				<div class="col-md-3 col-md2 animated wow fadeInRight" data-wow-delay=".5s">
+					<div class="col-md1 simpleCart_shelfItem">
+						<a href="single.html">
+							<img class="img-responsive" src="<?php echo base_url('assets/'); ?>images/pi11.png" alt="" />
+						</a>
+						<h3><a href="single.html">Trousers</a></h3>
+						<!-- <div class="price">
 							<h5 class="item_price">$350</h5>
 
 							<div class="clearfix"> </div>
 						</div> -->
 
+					</div>
 				</div>
-			</div>
-			<div class="col-md-3 col-md2 animated wow fadeInRight" data-wow-delay=".5s">
-				<div class="col-md1 simpleCart_shelfItem">
-					<a href="single.html">
-						<img class="img-responsive" src="<?php echo base_url('assets/'); ?>images/pi12.png" alt="" />
-					</a>
-					<h3><a href="single.html">Formal</a></h3>
-					<!-- <div class="price">
+				<div class="col-md-3 col-md2 animated wow fadeInRight" data-wow-delay=".5s">
+					<div class="col-md1 simpleCart_shelfItem">
+						<a href="single.html">
+							<img class="img-responsive" src="<?php echo base_url('assets/'); ?>images/pi12.png" alt="" />
+						</a>
+						<h3><a href="single.html">Formal</a></h3>
+						<!-- <div class="price">
 							<h5 class="item_price">$400</h5>
 
 							<div class="clearfix"> </div>
 						</div> -->
 
+					</div>
 				</div>
+				<div class="clearfix"> </div>
 			</div>
-			<div class="clearfix"> </div>
 		</div>
-	</div>
 	</div>
 	<!--footer-->
 	<?= $footer; ?>

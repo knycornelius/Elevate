@@ -43,7 +43,7 @@ class Login extends CI_Controller
                     $this->session->set_userdata($data);
                     $_SESSION["isLoggedIn"] = true;
                     if ($user['role_id'] == 1) {
-                        echo "sdfdfsdf";
+
                         $_SESSION["privilege"] = "admin";
                         $_SESSION["iduser"] = $user['id_user'];
                         $_SESSION["name"] = $user['name'];
@@ -52,7 +52,7 @@ class Login extends CI_Controller
                         $_SESSION["notelp"] = $user['no_telp'];
                         redirect('index.php/cms');
                     } else {
-                        echo  "sdsdfsdf";
+
                         $_SESSION["privilege"] = "user";
                         $_SESSION["iduser"] = $user['id_user'];
                         $_SESSION["name"] = $user['name'];
@@ -87,6 +87,8 @@ class Login extends CI_Controller
         if ($this->form_validation->run() == false) {
             $data['user'] = $this->db->get_where('user', ['email' =>
             $this->session->userdata('email')])->row_array();
+            $data['js'] = $this->load->view('include/javascript.php', NULL, TRUE);
+            $data['css'] = $this->load->view('include/css.php', NULL, TRUE);
             $data['header'] = $this->load->view('pages/header.php', $data, TRUE);
             $data['footer'] = $this->load->view('pages/footer.php', NULL, TRUE);
             $this->load->view('pages/registeration.php', $data);
@@ -95,7 +97,7 @@ class Login extends CI_Controller
             $data = array(
                 'name' => htmlspecialchars($this->input->post('fname', true)),
                 'email'  => htmlspecialchars($this->input->post('email', true)),
-                'image'  => 'default.jpg',
+                'image'  => 'default.png',
                 'password'  => password_hash($this->input->post('password1'), PASSWORD_DEFAULT),
                 'role_id' => 2,
                 'is_active' => 0,
@@ -104,7 +106,7 @@ class Login extends CI_Controller
             );
             $this->db->insert('user', $data);
             $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Congratulations! your account has been created. Please Login</div>');
-            redirect('login');
+            redirect('index.php/login');
         }
     }
     public function logout()

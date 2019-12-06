@@ -127,32 +127,36 @@
 
                                     </div>
                                 </li>
-                                <li><a href="<?= base_url('products'); ?>">Products</a></li>
-                                <li><a href="<?= base_url('contact'); ?>">Contact</a></li>
+                                <li><a href="<?= base_url('index.php/products'); ?>">Products</a></li>
+                                <li><a href="<?= base_url('index.php/contact'); ?>">Contact</a></li>
 
 
                                 <?php if ($user) { ?>
-                                    <li style="text-align:right;" class="nav-item dropdown " id="dropdownMenu1"><a href="#" class="nav-link dropdown-toggle user-action" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php echo $user['name']; ?><img src="<? echo base_url('assets/images/' . $user['image']); ?>" style="width:30px;height:30px;" class="img-profile rounded-circle"></a>
+                                    <li class="dropdown mega-dropdown active " id="dropdownMenu1"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $user['name']; ?><span class="glyphicon glyphicon-user"></span></a>
+                                        <div class="dropdown-menu dropdown-menu-right dropdown-default">
+                                            <div class="container-fluid">
+                                                <!-- Tab panes -->
 
-                                        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                                                <ul class="nav nav-pills">
 
-                                            <li><a href="#" class="dropdown-item"><i class="fa fa-user-o"></i>
-                                                    Profile</a></li>
-                                            <li role="separator" class="divider"></li>
-                                            <li class="dropdown-item" onclick="logout()"><a href="#" class="dropdown-item">
-                                                    <i class="material-icons">&#xE8AC;</i>
-                                                    Logout
-                                            </li>
+                                                    <li><a href="#" class="dropdown-item text-center"><i class="fa fa-user-o"></i>
+                                                            Profile</a></li>
+                                                    <hr class="m-2">
 
-                                            <!-- <div class="dropdown-divider"></div>
-                                            <p class="dropdown-item" onclick="logout()" data-toggle="modal" data-target="#logoutModal">
-                                                <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                                Logout
-                                            </p> -->
-                                        </ul>
-                                    </li><?php } ?>
+                                                    <li class="dropdown-item" onclick="logout()"><a href="#" class="dropdown-item">
+                                                            <span class="glyphicon glyphicon-log-out"></span>
+                                                            Logout
+                                                    </li>
+
+
+                                                </ul>
+
+                                            </div>
+                                        </div>
+                                    </li>
+                                <?php } ?>
                                 <?php if (!$user) { ?>
-                                    <li class="last"><a href="<?= base_url('login'); ?>">Sign In</a></li><?php } ?>
+                                    <li class="last"><a href="<?= base_url('index.php/login'); ?>">Sign In</a></li><?php } ?>
                             </ul>
 
                         </div><!-- /.navbar-collapse -->

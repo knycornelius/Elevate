@@ -35,15 +35,18 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 								?>
 							<div class="col-md-4 col-md4">
 								<div class="col-md1 simpleCart_shelfItem">
-									<a href="detail?category=e_women&id=<?php echo $womendata[$x]['id_item']; ?>">
+									<a href="detail?category=women&id=<?php echo $womendata[$x]['id_item']; ?>&size=M">
 										<img class="img-responsive" src="<?php echo base_url('assets/images/e_women/') . $womendata[$x]['image1'];
 																					?>" alt="" />
 									</a>
-									<h3 style="height: 2.5rem"><a href="detail?category=e_women&id=<?php echo $womendata[$x]['id_item'] ?>"><?= $womendata[$x]['item_name']; ?></a></h3>
+									<h3 style="height: 2.5rem"><a href="detail?category=women&id=<?php echo $womendata[$x]['id_item'] ?>&size=M"><?= $womendata[$x]['item_name']; ?></a></h3>
 									<div class="price">
 										<h5 class="item_price"><?= "Rp." . number_format($womendata[$x]['price'], 0, ",", ".") ?></h5>
-										<a href="#" class="item_add">Add To Cart</a>
+
 										<div class="clearfix"> </div>
+									</div>
+									<div class="text-right">
+										<a style="color:grey;" href="detail?category=women&id=<?php echo $womendata[$x]['id_item']; ?>&size=M"><span class="glyphicon glyphicon-search text-right"> </span> </a>
 									</div>
 								</div>
 							</div><?php
@@ -89,11 +92,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					for ($i = 0; $i < 4; $i++) { ?>
 						<div class="product-go">
 							<div class=" fashion-grid">
-								<a href="detail?category=e_women&id=<?php echo $womendata[$x]['id_item']; ?>"><img class="img-responsive " src="<?= base_url('assets/images/e_women/') . $womendata[$x]['image1']; ?>" alt=""></a>
+								<a href="detail?category=women&id=<?php echo $womendata[$x]['id_item']; ?>&size=M"><img class="img-responsive " src="<?= base_url('assets/images/e_women/') . $womendata[$x]['image1']; ?>" alt=""></a>
 							</div>
 							<div class=" fashion-grid1">
-								<h6 class="best2"><a href="detail?category=e_women&id=<?php echo $womendata[$x]['id_item']; ?>"><?= $womendata[$x]['item_name']; ?> </a></h6>
-								<span class=" price-in1"> <?= "Rp." . number_format($womendata[$x]['price'], 0, ",", "."); ?></span>
+								<h6 class="best2"><a href="detail?category=women&id=<?php echo $womendata[$x]['id_item']; ?>&size=M"><?= $womendata[$x]['item_name']; ?> </a></h6>
+								<h5 class="item_price"><?= "Rp." . number_format($womendata[$x]['price'], 0, ",", ".") ?></h5>
 							</div>
 							<div class="clearfix"> </div>
 						</div>

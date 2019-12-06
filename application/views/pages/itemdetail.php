@@ -21,6 +21,7 @@
 	}
 </style>
 
+
 <body>
 	<div class="breadcrumbs">
 		<div class="container">
@@ -31,18 +32,19 @@
 		</div>
 	</div>
 	<div class="single">
-		<?php foreach ($item as $row) {
 
-			?>
-			<div class="container">
-				<div class="col-md-9">
-					<form method="post" action="detail/add_to_cart">
+		<div class="container">
+			<div class="col-md-9">
+				<form method="post" action="detail/add_to_cart">
+					<?php foreach ($item as $row) {
+
+						?>
 						<div class="col-md-5 grid">
 							<div>
 								<div class="flex-viewport" style="overflow:hidden; position: relative;">
 									<ul class="slides" style="width:1000%; transition-duration: 0.6s; ">
-										<li data-thumb="<?= base_url('assets/images/' . $itemcategory . '/' . $row['image1']); ?>" class aria-hidden="true" style="width: 63px; float:left; display:block;">
-											<div class="thumb-image"> <img src="<?= base_url('assets/images/' . $itemcategory . '/' . $row['image1']);
+										<li data-thumb="<?= base_url('assets/images/e_' . $itemcategory . '/' . $row['image1']); ?>" class aria-hidden="true" style="width: 63px; float:left; display:block;">
+											<div class="thumb-image"> <img src="<?= base_url('assets/images/e_' . $itemcategory . '/' . $row['image1']);
 																					?>" data-imagezoom="true" class="img-responsive" draggable="false"> </div>
 										</li>
 
@@ -64,20 +66,20 @@
 									<h6>Available Options :</h6>
 									<ul>
 
-										<li>Size:<select class="form-control" name="size">
-												<option>S</option>
-												<option>M</option>
-												<option>L</option>
-												<option>XL</option>
+										<li>Size:<select class="form-control" name="size" onchange="location=this.value">
+												<option value="detail?category=<?= $itemcategory ?>&id=<?php echo $row['id_item'] ?>&size=S" <?php echo ($row['size'] == 'S') ? 'selected' : '' ?>>S</option>
+												<option value="detail?category=<?= $itemcategory ?>&id=<?php echo $row['id_item'] ?>&size=M" <?php echo ($row['size'] == 'M') ? 'selected' : '' ?>>M</option>
+												<option value="detail?category=<?= $itemcategory ?>&id=<?php echo $row['id_item'] ?>&size=L" <?php echo ($row['size'] == 'L') ? 'selected' : '' ?>>L</option>
+												<option value="detail?category=<?= $itemcategory ?>&id=<?php echo $row['id_item'] ?>&size=XL" <?php echo ($row['size'] == 'XL') ? 'selected' : '' ?>>XL</option>
 
 											</select></li>
 										<li>Quantity:
-											<select class="form-control" name="qty">
-												<option>1</option>
-												<option>2</option>
-												<option>3</option>
-												<option>4</option>
-												<option>5</option>
+											<select class="form-control" name="stock">
+												<option <?php echo ($row['stock'] == '1') ? 'selected' : '' ?> value="1">1</option>
+												<option <?php echo ($row['stock'] == '2') ? 'selected' : '' ?> value="2">2</option>
+												<option <?php echo ($row['stock'] == '3') ? 'selected' : '' ?> value="3">3</option>
+												<option <?php echo ($row['stock'] == '4') ? 'selected' : '' ?> value="4">4</option>
+												<option <?php echo ($row['stock'] == '5') ? 'selected' : '' ?> value="5">5</option>
 
 											</select></li>
 									</ul>
@@ -88,24 +90,30 @@
 									<input type="hidden" name="prices" value="<?php echo $row['price']; ?>">
 									<input type="hidden" name="images1" value="<?php echo $row['image1']; ?>">
 									<input type="hidden" name="itemcategory" value="<?php echo $itemcategory; ?>">
+									<input type="hidden" name="size" value=<?php echo $row['size']; ?>>
+
 								</div>
 
-								<a data-toggle="modal" data-target="#myModal" id="addcart" name="addcart" class="cart item_add" value="Add to Cart"></a>
-								<input type="submit" name="buynow" class="cart item_add" value="Buy Now">
+								<a data-toggle="modal" data-target="#myModal" id="addcart" name="addcart" class="cart" value="Add to">
+									<font color="#FFF">Add to Cart</font>
+								</a>
+								<input type="submit" id="buynow" name="buynow" class="cart" value="Buy Now">
 
 							</div>
 						</div>
 						<div class="clearfix"> </div>
-						<br>
-						<br>
-						<br>
-						<br>
-						<div class="product-bottom">
-							<h3 class="cate">Related</h3>
-						</div>
-						<div class="content-top1">
+					<?php } ?>
+					<br>
+					<br>
+					<br>
+					<br>
+					<div class="product-bottom">
+						<h3 class="cate">Related</h3>
+					</div>
 
-						<?php }
+					<div class="content-top1">
+
+						<?php
 
 						$x = 0;
 						for ($i = 0; $i < 3; $i++) {
@@ -113,15 +121,18 @@
 							?>
 							<div class="col-md-4 col-md4">
 								<div class="col-md1 simpleCart_shelfItem">
-									<a href="detail?category=<?= $itemcategory; ?>&id=<?php echo $cat[$x]['id_item']; ?>">
-										<img class="img-responsive" src="<?= base_url('assets/images/' . $itemcategory . '/' . $cat[$x]['image1']);
+									<a href="detail?category=<?= $itemcategory; ?>&id=<?php echo $cat[$x]['id_item']; ?>&size=M">
+										<img class="img-responsive" src="<?= base_url('assets/images/e_' . $itemcategory . '/' . $cat[$x]['image1']);
 																				?>" alt="" />
 									</a>
-									<h3><a href="detail?category=<?= $itemcategory; ?>&id=<?php echo $cat[$x]['id_item']; ?>"><?php echo $cat[$x]['item_name']; ?></a></h3>
+									<h3><a href="detail?category=<?= $itemcategory; ?>&id=<?php echo $cat[$x]['id_item']; ?>&size=M"><?php echo $cat[$x]['item_name']; ?></a></h3>
 									<div class="price">
 										<h5 class="item_price"><?php echo "Rp." . number_format($cat[$x]['price'], 0, ",", "."); ?></h5>
-										<a href="#" class="item_add">Add To Cart</a>
+
 										<div class="clearfix"> </div>
+									</div>
+									<div class="text-right">
+										<a style="color:grey;" href="detail?category=<?= $itemcategory; ?>&id=<?php echo $cat[$x]['id_item']; ?>&size=M"><span class="glyphicon glyphicon-search text-right"> </span> </a>
 									</div>
 
 								</div>
@@ -130,73 +141,78 @@
 
 
 						<div class="clearfix"> </div>
-						</div>
-						<div class="modal fade" id="myModal" role="dialog" tabindex="-1">
-							<div class="vertical-alignment-helper">
-								<div class="modal-dialog modal-sm vertical-align-center">
+					</div>
 
-									<div class="modal-content">
-										<form method="post" action="<?php echo base_url('index.php/shopcart') ?>">
+					<div class="modal fade" id="myModal" role="dialog" tabindex="-1">
+						<div class="vertical-alignment-helper">
+							<div class="modal-dialog modal-sm vertical-align-center">
 
-											<div class="modal-body">
-												Selamat! Barang Anda sudah ada di Shopping Cart
-											</div>
-											<div class="modal-footer">
+								<div class="modal-content">
+									<form method="post" action="<?php echo base_url('index.php/detail/add_to_cart') ?>">
 
-												<button type="submit" name="addcart" class="btn btn-sm btn-default">OK</button>
-											</div>
-									</div>
+										<div class="modal-body">
+											<font color="$28a745">
+												Product added to cart</font>
+										</div>
+										<div class="modal-footer">
+
+
+											<button type="submit" name="addcart" class="btn btn-sm bg-success"><span class="glyphicon glyphicon-ok bg-success"></span>OK</button>
+										</div>
+									</form>
 								</div>
 							</div>
 						</div>
-				</div>
-				<!----->
-				<div class="col-md-3 product-bottom">
-					<!--categories-->
-					<?= $categories; ?>
-					<!--initiate accordion-->
-					<script type="text/javascript">
-						$(function() {
-							var menu_ul = $('.menu-drop > li > ul'),
-								menu_a = $('.menu-drop > li > a');
-							menu_ul.hide();
-							menu_a.click(function(e) {
-								e.preventDefault();
-								if (!$(this).hasClass('active')) {
-									menu_a.removeClass('active');
-									menu_ul.filter(':visible').slideUp('normal');
-									$(this).addClass('active').next().stop(true, true).slideDown('normal');
-								} else {
-									$(this).removeClass('active');
-									$(this).next().stop(true, true).slideUp('normal');
-								}
-							});
-
-						});
-					</script>
-					<!--//menu-->
-					<!--seller-->
-					<div class="product-bottom">
-						<h3 class="cate">Best Sellers</h3>
-						<?php $x = 0;
-						for ($i = 0; $i < 4; $i++) { ?>
-							<div class="product-go">
-								<div class=" fashion-grid">
-									<a href="detail?category=<?= $itemcategory; ?>&id=<?php echo $cat[$x]['id_item']; ?>"><img class="img-responsive " src="<?= base_url('assets/images/' . $itemcategory . '/' . $cat[$x]['image1']);
-																																								?>" alt=""></a>
-								</div>
-								<div class=" fashion-grid1">
-									<h6 class="best2"><a href="detail?category=<?= $itemcategory; ?>&id=<?php echo $cat[$x]['id_item']; ?>"><?= $cat[$x]['item_name']; ?> </a></h6>
-									<span class=" price-in1"> <?= "Rp." . number_format($cat[$x]['price'], 0, ",", "."); ?></span>
-								</div>
-								<div class="clearfix"> </div>
-							</div><?php $x++;
-									} ?>
 					</div>
+				</form>
+			</div>
+			<!----->
+			<div class="col-md-3 product-bottom">
+				<!--categories-->
+				<?= $categories; ?>
+				<!--initiate accordion-->
+				<script type="text/javascript">
+					$(function() {
+						var menu_ul = $('.menu-drop > li > ul'),
+							menu_a = $('.menu-drop > li > a');
+						menu_ul.hide();
+						menu_a.click(function(e) {
+							e.preventDefault();
+							if (!$(this).hasClass('active')) {
+								menu_a.removeClass('active');
+								menu_ul.filter(':visible').slideUp('normal');
+								$(this).addClass('active').next().stop(true, true).slideDown('normal');
+							} else {
+								$(this).removeClass('active');
+								$(this).next().stop(true, true).slideUp('normal');
+							}
+						});
 
-					<!--//seller-->
-					<!--tag-->
-					<div class="tag">
+					});
+				</script>
+				<!--//menu-->
+				<!--seller-->
+				<div class="product-bottom">
+					<h3 class="cate">Best Sellers</h3>
+					<?php $x = 0;
+					for ($i = 0; $i < 4; $i++) { ?>
+						<div class="product-go">
+							<div class=" fashion-grid">
+								<a href="detail?category=<?= $itemcategory; ?>&id=<?php echo $cat[$x]['id_item']; ?>&size=M"><img class="img-responsive " src="<?= base_url('assets/images/e_' . $itemcategory . '/' . $cat[$x]['image1']);
+																																									?>" alt=""></a>
+							</div>
+							<div class=" fashion-grid1">
+								<h6 class="best2"><a href="detail?category=<?= $itemcategory; ?>&id=<?php echo $cat[$x]['id_item']; ?>&size=M"><?= $cat[$x]['item_name']; ?> </a></h6>
+								<h5 class="item_price"> <?= "Rp." . number_format($cat[$x]['price'], 0, ",", "."); ?></h5>
+							</div>
+							<div class="clearfix"> </div>
+						</div><?php $x++;
+								} ?>
+				</div>
+
+				<!--//seller-->
+				<!--tag-->
+				<!-- <div class="tag">
 						<h3 class="cate">Tags</h3>
 						<div class="tags">
 							<ul>
@@ -215,10 +231,10 @@
 								<div class="clearfix"> </div>
 							</ul>
 						</div>
-					</div>
-				</div>
-				<div class="clearfix"> </div>
+					</div> -->
 			</div>
+			<div class="clearfix"> </div>
+		</div>
 	</div>
 	<!--footer-->
 	<?= $footer; ?>
