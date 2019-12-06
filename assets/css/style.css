@@ -322,6 +322,9 @@ i.glyphicon.glyphicon-phone {
 a.item_add {
  text-decoration: none;
 }		
+input.item_add{
+  text-decoration: none;
+}
 .grid_1 img{
 	margin-bottom:1em;
 }
@@ -1053,14 +1056,14 @@ ul.kid-menu{
 .rsidebar.span_1_of_left {
     margin-bottom: 2em;
 }
-.menu-drop {
+.drop-menu {
 	width: auto;
 	height: auto;
 	padding: 0;
 	list-style: none;
 	margin: 0.5em 0;	
 }
-.menu-drop > li > a {
+.drop-menu > li > a {
 	width: 100%;
   margin: 0.3em 0;
 	display:inline-block;
@@ -1069,10 +1072,10 @@ ul.kid-menu{
 	font-size: 0.9em;
 	text-decoration:none;
 }
-.menu-drop > li > a:hover{
+.drop-menu > li > a:hover{
 	color:#403b37;
 }
-.menu-drop ul li a {	
+.drop-menu ul li a {	
 	width: 100%;
 	display: inline-block;
 	position: relative;
@@ -1082,7 +1085,7 @@ ul.kid-menu{
 	text-decoration:none;
 	text-indent: 1.2em;
 }
-.menu-drop ul li a:hover{
+.drop-menu ul li a:hover{
 	color:#000;
 }
 ul.kid-menu li,ul.cute li{
@@ -1175,6 +1178,7 @@ label.add-to{
 a.cart{
   padding: 0.3em 0.7em;
   color: #FFF;
+ 
   background: #403b37;
   margin: 1.5em 0 0;
   font-size: 1em;
@@ -1184,6 +1188,21 @@ a.cart{
   text-decoration:none;
 }
 a.cart:hover{
+	background:#fa03bb;
+}
+
+input.cart{
+  padding: 0.3em 0.7em;
+  color: #FFF;
+  background: #403b37;
+  margin: 1.5em 0 0;
+  font-size: 1em;
+  display:inline-block;
+  line-height: 1.6em;
+  text-align: center;
+  text-decoration:none;
+}
+input.cart:hover{
 	background:#fa03bb;
 }
 /*----*/
@@ -1297,6 +1316,24 @@ a.at-in {
   color: #fa03bb;
   margin: 0 0px 1em;
   text-align: center;
+}
+.check-out input[type="submit"] {
+  background: #403b37;
+  color: #fff;
+  border: none;
+  outline: none;
+  margin: 1em 15px 0;
+  padding: 0.3em 1em;
+  font-size: 1.2em;
+  display: inline-block;
+  transition: 0.5s all;
+  -webkit-transition: 0.5s all;
+  -moz-transition: 0.5s all;
+  -o-transition: 0.5s all;
+  -ms-transition: 0.5s all;
+}
+.check-out input[type="submit"]:hover {
+  background: #fa03bb;
 }
 a.to-buy{
 	padding: 0.3em 0.7em;
@@ -2063,6 +2100,7 @@ th, td {
 button.btn.btn-lg {
   font-size: 1.1em;
 }
+
 h1.grid2 {
   font-size: 2em;
 }
@@ -2684,6 +2722,11 @@ button.btn.btn-lg {
 }
 button.btn.btn-1 {
   font-size: 0.8em;
+  margin: 0 0 0.5em;
+}
+button.btn.btn-sm {
+  font-size: 0.7em;
+  padding: 5px;
   margin: 0 0 0.5em;
 }
 button.btn.btn-sm {
