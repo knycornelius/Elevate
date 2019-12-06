@@ -131,27 +131,40 @@ class Fashions extends CI_Model
     }
 
 
-    public function getTransDet($cat, $byk, $id)
+    public function getTransDet($data, $byk)
     {
-        $this->db->select('*');
-        $this->db->from('e_transaction_details');
-        $this->db->join('e_transaction', 'e_transaction.id_transaction = e_transaction_details.id_transaction ');
-        $this->db->join($cat, $cat . '.id_item = e_transaction_details.id_item');
-        $this->db->limit($byk);
-        $query = $this->db->get();
-        return $query->result_array();
+        // $idbrg = $data['id'];
+        // $brgqty = $data['qty'];
+        // $harga = $data['price'];
+        // $date = date("Y-m-d");
+
+        // $this->db->select('*');
+        // $this->db->from('e_transaction_details');
+        // $this->db->join('e_transaction', 'e_transaction.id_transaction = e_transaction_details.id_transaction ');
+        // $this->db->join(e_$cat, e_$cat . '.id_item = e_transaction_details.id_item');
+        // $this->db->limit($byk);
+        // $query = $this->db->gFwet();
+        // return $query->result_array();
+        // $query = $this->db->query("select c.item_name 'item_name',td.qty,td.price 'price' ,t.transaction_date 'transaction_date'
+        //     from e_transaction_details td, e_transaction t, e_".$cat." c
+        //     where td.id_transaction = t.id_transaction and td.id_item = c.id_item");
+        
+        //echo "<pre>";
+        //echo ($query1);
+        //echo "</pre>";
+        return $data;
     }
     public function update_stock($data)
     {
 
         $category = $data['category'];
         $idbrg = $data['id'];
-        $stockdata = $this->db->query("SELECT stock from size_$category WHERE id_item = '$idbrg'");
+        $stockdata = $this->db->query("SELECT stock from size_$category WHERE id = '$idbrg'");
         $stocked = $stockdata->result_array();
         foreach ($stocked as $row) {
             $stocks = $row['stock'] - $data['qty'];
         }
 
-        $this->db->query("UPDATE size_$category SET stock = $stocks WHERE id_item = '$idbrg' ");
+        $this->db->query("UPDATE size_$category SET stock = $stocks WHERE id = '$idbrg' ");
     }
 }

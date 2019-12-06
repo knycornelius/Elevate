@@ -131,7 +131,7 @@
                                 <li><a href="<?= base_url('index.php/contact'); ?>">Contact</a></li>
 
 
-                                <?php if ($user) { ?>
+                                <?php if ($user != NULL) { ?>
                                     <li class="dropdown mega-dropdown active " id="dropdownMenu1"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $user['name']; ?><span class="glyphicon glyphicon-user"></span></a>
                                         <div class="dropdown-menu dropdown-menu-right dropdown-default">
                                             <div class="container-fluid">

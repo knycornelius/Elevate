@@ -245,7 +245,7 @@
 	<!-- start menu -->
 	<script type="text/javascript" src="<?= base_url('assets/'); ?>js/memenu.js"></script>
 	<script>
-		$(document).ready(function() {
+		$(document).ready(function() {a
 			$(".memenu").memenu();
 		});
 	</script>

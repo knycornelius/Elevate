@@ -1,7 +1,7 @@
-<!D0CTYPE html>
-    <html>
-
-    <head>
+<!DOCTYPE html>
+<html>
+<?= $header;
+    $css ?>
 
         <style>
             .invoice-box {
@@ -97,13 +97,17 @@
                 text-align: left;
             }
         </style>
-
-    </head>
-    <?php echo $header; ?>
-
-    <body>
-
-        <div class="invoice-box">
+<body>
+    <div class="breadcrumbs">
+        <div class="container">
+            <ol class="breadcrumb breadcrumb1 animated wow slideInLeft animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: slideInLeft;">
+                <li><a href="<?= base_url(' '); ?> "><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Home</a></li>
+                <li class="active">Checkout</li>
+            </ol>
+        </div>
+    </div>
+    <!---->
+           <div class="invoice-box">
             <table cellpadding="0" cellspacing="0">
                 <tr class="top">
                     <td colspan="2">
@@ -112,14 +116,10 @@
                                 <td class="col-sm-4 logo">
                                     <h1>Ele<span>vate</span></h1>
                                     <h2>Proses Order Telah Berhasil</h2>
+                                     Created: <?php echo date("Y-m-d");
+                                                    ?><br>
                                 </td>
-
-                                <?php foreach ($transdetails as $trans) { ?>
-                                    <td>
-
-                                        Created: <?= $trans['transaction_date'];
-                                                    } ?><br>
-                                    </td>
+                                    
                             </tr>
                         </table>
                     </td>
@@ -153,11 +153,11 @@
                         Price
                     </td>
                 </tr>
-                <?php foreach ($transdetails as $trans) { ?>
+                <?php foreach ($item as $trans) { ?>
                     <tr class="item">
                         <td>
                             <?=
-                                    $trans['item_name']; ?>
+                                    $trans['name']; ?>
                         </td>
 
                         <td>
@@ -175,10 +175,18 @@
                         } ?>
                         </td>
                     </tr>
+                    <tr>
+                        <td>
+                            <form method="POST" action="checkout/cartDestroy">
+                <input type="submit" class="cart" value="Back to Home">
+            </form>
+                        </td>
+                    </tr>
             </table>
         </div>
+    <!--footer-->
+    <?= $footer; ?>
+    <!--footer-->
+</body>
 
-
-        <?php echo $footer; ?>
-
-    </body>
+</html>

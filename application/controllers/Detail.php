@@ -29,7 +29,7 @@ class Detail extends CI_Controller
     }
     public function add_to_cart()
     {
-
+    
         $data['user'] = $this->db->get_where('user', ['email' =>
         $this->session->userdata('email')])->row_array();
         // $items = $this->fashions->get($this->input->post('id'));
@@ -46,17 +46,20 @@ class Detail extends CI_Controller
         $data['header'] = $this->load->view('pages/header.php', $data, TRUE);
         $data['footer'] = $this->load->view('pages/footer.php', NULL, TRUE);
         $data['categories'] = $this->load->view('pages/category.php', NULL, TRUE);
-        $datacart = array(
-            'iduser' => $_SESSION["iduser"],
-            'id' => $this->input->post('id'),
-            'qty'  => $this->input->post('stock'),
-            'price' =>  $this->input->post('prices'),
-            'name' => $this->input->post('name'),
-            'image1' => $this->input->post('images1'),
-            'category' => $this->input->post('itemcategory'),
-            'size' => $this->input->post('size')
-        );
-        $this->cart->insert($datacart);
+        
+      
+            $datacart = array(
+                
+                'id' => $this->input->post('id'),
+                'qty'  => $this->input->post('stock'),
+                'price' =>  $this->input->post('prices'),
+                'name' => $this->input->post('name'),
+                'image1' => $this->input->post('images1'),
+                'category' => $this->input->post('itemcategory'),
+                'size' => $this->input->post('size')
+            );
+            $this->cart->insert($datacart);
+        
 
         if (isset($_POST['addcart'])) {
             $data['item'] = $this->fashions->getSelectedData($data['itemcategory'], $data['itemid'], $data['size']);

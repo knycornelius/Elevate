@@ -26,14 +26,20 @@ class CheckOut extends CI_Controller
         foreach ($this->cart->contents() as $cart) {
             $this->fashions->insert_trans($cart);
             $this->fashions->update_stock($cart);
+             $data['transdetails'] = $this->fashions->getTransDet($cart, count($cart));
         }
-        foreach ($data['item'] as $row) {
-            $data['itemcategory'] =  $row['category'];
-            $data['transdetails'] = $this->fashions->getTransDet($data['itemcategory'], count($data['item']), $row['id']);
-        }
+        // foreach ($data['item'] as $row) {
+           
+        // }
 
         $data['footer'] = $this->load->view('pages/footer.php', NULL, TRUE);
-        $this->cart->destroy();
+        
         $this->load->view('pages/ordersuccess.php', $data);
+    }
+
+    public function cartDestroy()
+    {
+        $this->cart->destroy();
+        redirect('index.php/home');
     }
 }
