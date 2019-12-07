@@ -128,5 +128,20 @@
 
             return $imageName;
         }
+
+        public function getTransactionHistory() {
+            
+            $table = "e_transaction";
+            $table__detail = "e_transaction_details";
+
+            $query = $this->db->query("select tr.transaction_date 'date', u.name 'name', sum(td.price) 'price'
+                from $table tr, $table__detail td, user u
+                where tr.id_transaction = td.id_transaction AND
+                tr.id_user = u.id_user
+                Group By tr.transaction_date, u.name
+                Order By tr.transaction_date desc, u.name;");
+
+            return $query->result_array();
+        }
     }
 ?>

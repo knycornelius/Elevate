@@ -113,7 +113,7 @@
 
 <body>
     <div class="cms_nav">
-        <h1>Content Management System</h1>
+        <h1>Content Management System - Item Detail (<?php echo ucfirst($_GET['category']); ?>)</h1>
     </div>
     <div class="outer" style="padding: 0 25px;">
         <div class="contain" style="margin-top: 100px;">

@@ -75,7 +75,7 @@
 
 <body>
     <div class="cms_nav">
-        <h1>Content Management System</h1>
+        <h1>Content Management System - <?php echo ucfirst($_GET['category']); ?></h1>
     </div>
     <div class="addItems">
         <a href="http://localhost/bose/index.php/cms/addPage?category=<?php echo $_GET['category']; ?>"><button class="btn btn-primary">Add Item</button></a>

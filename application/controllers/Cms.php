@@ -132,4 +132,11 @@ class Cms extends CI_Controller {
         $this->CmsModel->delete($_GET['category'], $param);
         redirect(base_url()."index.php/cms?category=". $_GET['category']);
     }
+
+    public function history() {
+        $data['js'] = $this->load->view('include/javascript.php', NULL, TRUE);
+        $data['css'] = $this->load->view('include/css.php', NULL, TRUE);
+        $data['output'] = $this->CmsModel->getTransactionHistory();
+        $this->load->view('pages/backend/cms__history', $data);
+    }
 }

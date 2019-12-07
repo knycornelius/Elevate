@@ -30,6 +30,10 @@
 		function goTo(category) {
 			window.location.href = "http://localhost/bose/index.php/cms?category=" + category;
 		}
+
+		function goToHistory() {
+			window.location.href = "http://localhost/bose/index.php/cms/history";
+		}
 	</script>
 </head>
 
@@ -76,8 +80,8 @@
 		<div class="grid" onclick="goTo('kids')">
 			Kids
 		</div>
-		<div class="grid" onclick="goTo('others')">
-			Others
+		<div class="grid" onclick="goToHistory()">
+			Transaction History
 		</div>
 	</div>
 	<div class="cms_footer">
