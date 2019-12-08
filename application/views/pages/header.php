@@ -131,21 +131,23 @@
                                 <li><a href="<?= base_url('index.php/contact'); ?>">Contact</a></li>
 
 
-                                <?php if ($user != NULL) { ?>
-                                    <li class="dropdown mega-dropdown active " id="dropdownMenu1"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $user['name']; ?><span class="glyphicon glyphicon-user"></span></a>
+                                <?php if ($user) { ?>
+                                    <li class="dropdown mega-dropdown active " id="dropdownMenu1"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $user['name']; ?> <span class=" text-right glyphicon glyphicon-user"></span></a>
                                         <div class="dropdown-menu dropdown-menu-right dropdown-default">
                                             <div class="container-fluid">
                                                 <!-- Tab panes -->
 
                                                 <ul class="nav nav-pills">
 
-                                                    <li><a href="#" class="dropdown-item text-center"><i class="fa fa-user-o"></i>
+                                                    <li><a href="<?= base_url('index.php/profile'); ?>" class="dropdown-item text-center mb-1"><i class="fa fa-user-o"></i>
                                                             Profile</a></li>
                                                     <hr class="m-2">
 
-                                                    <li class="dropdown-item" onclick="logout()"><a href="#" class="dropdown-item">
-                                                            <span class="glyphicon glyphicon-log-out"></span>
-                                                            Logout
+                                                    <li class="dropdown-item mb-1"><a href="<?= base_url('login/logout') ?>" class="dropdown-item">
+                                                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                                                <span class="glyphicon glyphicon-log-out"></span>
+                                                                Logout
+                                                            </a>
                                                     </li>
 
 
@@ -202,7 +204,21 @@
             </div>
         </div>
     </div>
-    <!--banner-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="<?= base_url('login/logout'); ?>">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </body>
 

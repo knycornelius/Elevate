@@ -28,11 +28,11 @@
 		}
 
 		function goTo(category) {
-			window.location.href = "http://localhost/bose/index.php/cms?category=" + category;
+			window.location.href = "http://localhost/elevate/index.php/cms?category=" + category;
 		}
 
 		function goToHistory() {
-			window.location.href = "http://localhost/bose/index.php/cms/history";
+			window.location.href = "http://localhost/elevate/index.php/cms/history";
 		}
 	</script>
 </head>

@@ -78,7 +78,7 @@
         <h1>Content Management System - <?php echo ucfirst($_GET['category']); ?></h1>
     </div>
     <div class="addItems">
-        <a href="http://localhost/bose/index.php/cms/addPage?category=<?php echo $_GET['category']; ?>"><button class="btn btn-primary">Add Item</button></a>
+        <a href="http://localhost/elevate/index.php/cms/addPage?category=<?php echo $_GET['category']; ?>"><button class="btn btn-primary">Add Item</button></a>
     </div>
     <div class="row" style="margin-top: 100px;">
         <table id="myTable" class="table table-striped table-bordered">

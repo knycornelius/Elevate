@@ -762,6 +762,34 @@ p.footer-class a:hover{
 	display: block;
 }
 /*--//contact--*/
+/*-- profile --*/
+
+.profile {
+  padding: 4em 0;
+}
+
+.profile .container .img{
+  text-align:center;
+}
+.profile .container .details{
+  border-left:3px solid #ded4da;
+}
+.profile .container .details p{
+  font-size:15px;
+  font-weight:bold;
+}
+.profile h3 {
+    font-size: 3em;
+    color: #fa03bb;
+    margin: 0 0px 1em;
+    text-align: center;
+	font-family: 'Poiret One', cursive;
+	font-weight:700;
+}
+.profile-top {
+  margin: 1em 15px 0;
+}
+/*--//profile--*/
 .breadcrumb1 li span {
     left: 0em;
     padding-right: 1em;
