@@ -28,7 +28,7 @@
             <hr>
             <div class="m-5">
                 <h2> Terms and Conditions </h2>
-                <li> To place an order with ZALORA you must be more than eighteen (18) years. If you are under eighteen (18) years old, you can place an order with Elevate only with the involvement of a parent or guardian. </li>
+                <li> To place an order with Elevate you must be more than eighteen (18) years. If you are under eighteen (18) years old, you can place an order with Elevate only with the involvement of a parent or guardian. </li>
                 <li> The user hereby declares that the user is a capable person and is able to bind himself in a legal agreement. </li>
                 <li> Elevate does not charge registration fees to Users. </li>
                 <li> You may not abuse this Site. You will not commit or support criminal acts, transmit or distribute viruses including Trojan horses, worms, logic bombs or transmit other dangerous material on the Site, dangerous technology, violating trust or in any way that is offensive or harassing; entering every aspect of the Service; corrupting data; cause interference with other users; violate other people's politeness rights; sending unsolicited advertisements or promotional material; or try to influence the performance or function of each computer facility or access to the entire Site. Every violation of this provision is a criminal offense under Law Number 11 Year 2008 concerning the Internet and Electronic Transactions (ITE). If this happens, Elevate will report the violation to the relevant law enforcement authorities and appropriate legal action will be taken.</li>
