@@ -55,12 +55,19 @@
 
             $query = $this->db->query("INSERT INTO $table VALUES('$id', $stock, '$size', $price);");
         }
-
+        
         public function update($category, $value)
         {
             $table = "e_".$category;
-
+            
             $this->db->replace($table, $value);
+        }
+        
+        public function updatePrice($category, $id, $size, $price, $stock)
+        {
+            $table = "size_".$category;
+
+            $query = $this->db->query("UPDATE $table SET Price = $price, Stock = $stock WHERE id = '$id' AND size = '$size'");
         }
 
         public function getLastID($cat, $id, $category)
@@ -120,6 +127,21 @@
             }
 
             return $imageName;
+        }
+
+        public function getTransactionHistory() {
+            
+            $table = "e_transaction";
+            $table__detail = "e_transaction_details";
+
+            $query = $this->db->query("select tr.transaction_date 'date', u.name 'name', sum(td.price) 'price'
+                from $table tr, $table__detail td, user u
+                where tr.id_transaction = td.id_transaction AND
+                tr.id_user = u.id_user
+                Group By tr.transaction_date, u.name
+                Order By tr.transaction_date desc, u.name;");
+
+            return $query->result_array();
         }
     }
 ?>

@@ -1,3 +1,9 @@
+<script>
+	$('.custom-file-input').on('change', function() {
+		let fileName = $(this).val().split('\\').pop();
+		$(this).next('.custom-file-label').addClass("selected").html(fileName);
+	});
+</script>
 <div class="footer">
 	<div class="container">
 		<div class="footer-top">

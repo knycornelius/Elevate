@@ -128,6 +128,19 @@
             width: 80px;
             margin-right: 8px;
         }
+
+        .section__right>div {
+            width: 250px !important;
+            margin-bottom: 27.5px;
+        }
+
+        .section__size__style {
+            display: flex;
+        }
+
+        .section__size__style>div {
+            padding-right: 15px;
+        }
     </style>
     <script>
         function goTo(category) {
@@ -138,7 +151,7 @@
 
 <body>
     <div class="cms_nav">
-        <h1>Content Management System</h1>
+        <h1>Content Management System - Edit Item (<?php echo ucfirst($_GET['category']); ?>)</h1>
     </div>
     <div class="outer" style="padding: 0 25px;">
         <div class="contain" style="margin-top: 100px;">
@@ -174,13 +187,55 @@
                             </div>
                         </div>
                         <div class="section__right">
-                            <div class="form-group">
-                                <div>Stock </div>
-                                <input type="text" name="Stock" value="<?php echo $row['stock']; ?>" required />
-                            </div>
-                            <div class="form-group">
-                                <div>Price </div>
-                                <input type="text" name="Price" value="<?php echo $row['price']; ?>" required />
+                            <div class="form-group section__size">
+                                <div class="section__size__style">
+                                    <?php foreach ($S as $rows) { ?>
+                                        <div>
+                                            <div>Price (Size S)</div>
+                                            <input type="text" class="form-control" value="<?php echo $rows['Price']; ?>" name="PriceS" required />
+                                        </div>
+                                        <div>
+                                            <div>Stock (Size S)</div>
+                                            <input type="text" class="form-control" value="<?php echo $rows['Stock']; ?>" name="StockS" required />
+                                        </div>
+                                    <?php } ?>
+                                </div>
+                                <div class="section__size__style">
+                                    <?php foreach ($M as $rows) { ?>
+                                        <div>
+                                            <div>Price (Size M)</div>
+                                            <input type="text" class="form-control" value="<?php echo $rows['Price']; ?>" name="PriceM" required />
+                                        </div>
+                                        <div>
+                                            <div>Stock (Size M)</div>
+                                            <input type="text" class="form-control" value="<?php echo $rows['Stock']; ?>" name="StockM" required />
+                                        </div>
+                                    <?php } ?>
+                                </div>
+                                <div class="section__size__style">
+                                    <?php foreach ($L as $rows) { ?>
+                                        <div>
+                                            <div>Price (Size L)</div>
+                                            <input type="text" class="form-control" value="<?php echo $rows['Price']; ?>" name="PriceL" required />
+                                        </div>
+                                        <div>
+                                            <div>Stock (Size L)</div>
+                                            <input type="text" class="form-control" value="<?php echo $rows['Stock']; ?>" name="StockL" required />
+                                        </div>
+                                    <?php } ?>
+                                </div>
+                                <div class="section__size__style">
+                                    <?php foreach ($XL as $rows) { ?>
+                                        <div>
+                                            <div>Price (Size XL)</div>
+                                            <input type="text" class="form-control" value="<?php echo $rows['Price']; ?>" name="PriceXL" required />
+                                        </div>
+                                        <div>
+                                            <div>Stock (Size XL)</div>
+                                            <input type="text" class="form-control" value="<?php echo $rows['Stock']; ?>" name="StockXL" required />
+                                        </div>
+                                    <?php } ?>
+                                </div>
                             </div>
                             <div class="form-group">
                                 <div>Discount </div>
@@ -194,27 +249,11 @@
                                 <div>Discount End Date </div>
                                 <input type="date" name="DiscEd" value="<?php echo $row['disc_ed']; ?>" required />
                             </div>
-                            <div class="form-group">
-                                <div>Sub Category 1 </div>
-                                <select name="Sc1">
-                                    <?php foreach ($sub1 as $arr) { ?>
-                                        <option <?php echo ($arr['sc_name'] == $row['sc1']) ? 'selected' : '' ?> value="<?php echo $arr['sc_name'] ?>"><?php echo $arr['sc_name'] ?></option>
-                                    <?php } ?>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <div>Sub Category 2 </div>
-                                <select name="Sc2">
-                                    <?php foreach ($sub2 as $arr) { ?>
-                                        <option <?php echo ($arr['sc_name2'] == $row['sc2']) ? 'selected' : '' ?> value="<?php echo $arr['sc_name2'] ?>"><?php echo $arr['sc_name2'] ?></option>
-                                    <?php } ?>
-                                </select>
-                            </div>
                         </div>
                     </div>
                     <div class="button__action">
                         <button type="submit" class="btn btn-primary success">Edit Item</button>
-                        <button type="cancel" class="btn btn-danger"><a href="http://localhost/bose/index.php/cms?category=<?php echo $_GET['category']; ?>">Cancel</a></button>
+                        <button type="cancel" class="btn btn-danger"><a href="http://localhost/elevate/index.php/cms?category=<?php echo $_GET['category']; ?>">Cancel</a></button>
                     </div>
                 <?php } ?>
                 </form>
