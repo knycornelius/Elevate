@@ -1,28 +1,30 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    
+
 </head>
+
 <body>
     <?= $header; ?>
 
     <div class="breadcrumbs">
-		<div class="container">
-			<ol class="breadcrumb breadcrumb1 animated wow slideInLeft animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: slideInLeft;">
-				<li><a href="<?= base_url('index.php/home'); ?>"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Home</a></li>
-				<li class="active">FAQ</li>
-			</ol>
-		</div>
-	</div>
+        <div class="container">
+            <ol class="breadcrumb breadcrumb1 animated wow slideInLeft animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: slideInLeft;">
+                <li><a href="<?php echo base_url(''); ?>"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Home</a></li>
+                <li class="active">Terms and Conditions</li>
+            </ol>
+        </div>
+    </div>
 
     <div class="faq">
         <div class="container">
             <h3>Terms and Conditions</h3>
             <div class="m-5 text-justify">
                 <p>
-                Welcome to Elevate Website. The terms & conditions set forth below govern the use of services offered by PT. Elevate related to the use of the site. Users are advised to read carefully because it can impact the rights and obligations of users under the law.
-                
-                By registering and / or using the Elevate Website, the user is deemed to have read, understood, understood and agreed to all the contents in the Terms & Conditions. These terms & conditions are a form of agreement as outlined in a valid agreement between the User and PT. Elevate. If the user does not agree to one, some, or all of the contents of the Terms & Conditions, then the user is not permitted to use the service at Elevate.
+                    Welcome to Elevate Website. The terms & conditions set forth below govern the use of services offered by PT. Elevate related to the use of the site. Users are advised to read carefully because it can impact the rights and obligations of users under the law.
+
+                    By registering and / or using the Elevate Website, the user is deemed to have read, understood, understood and agreed to all the contents in the Terms & Conditions. These terms & conditions are a form of agreement as outlined in a valid agreement between the User and PT. Elevate. If the user does not agree to one, some, or all of the contents of the Terms & Conditions, then the user is not permitted to use the service at Elevate.
                 </p>
             </div>
             <hr>
@@ -37,8 +39,8 @@
             </div>
         </div>
     </div>
-    
+
     <div>
         <?php echo $footer; ?>
-     </div>
+    </div>
 </body>
