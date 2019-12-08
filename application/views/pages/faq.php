@@ -9,15 +9,15 @@
     <div class="breadcrumbs">
 		<div class="container">
 			<ol class="breadcrumb breadcrumb1 animated wow slideInLeft animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: slideInLeft;">
-				<li><a href="<?= base_url('index.php/home'); ?>"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Home</a></li>
-				<li class="active">FAQ</li>
+				<li><a href="<?php echo base_url(''); ?>"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Home</a></li>
+				<li class="active">Frequently Asked Questison</li>
 			</ol>
 		</div>
 	</div>
 
     <div class="faq">
         <div class="container">
-            <h3>Frequently Asked Question</h3>
+            <h3>Frequently Asked Questions</h3>
             <hr>
             <div>
                 <h2> How to shop at Elevate </h2>
