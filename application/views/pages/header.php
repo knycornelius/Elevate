@@ -127,7 +127,7 @@
 
                                     </div>
                                 </li>
-                                <li><a href="<?= base_url('index.php/about'); ?>">About</a></li>
+                                <li><a href="<?= base_url('index.php/products'); ?>">Products</a></li>
                                 <li><a href="<?= base_url('index.php/contact'); ?>">Contact</a></li>
 
 
