@@ -1,21 +1,14 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-	<?= $header; ?>
-</head>
+<?= $header; ?>
 
 <body>
-
 	<!--//header-->
 	<div class="breadcrumbs">
 		<div class="container">
 			<ol class="breadcrumb breadcrumb1 animated wow slideInLeft animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: slideInLeft;">
-				<li><a href="<?php echo base_url(''); ?>"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Home</a></li>
+				<li><a href="index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Home</a></li>
 				<li class="active">Contact</li>
 			</ol>
 		</div>
-	</div>
 	</div>
 	<div class="contact">
 		<div class="container">
