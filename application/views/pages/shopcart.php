@@ -2,7 +2,6 @@
 <html>
 <?= $header; ?>
 
-
 <body>
 	<div class="breadcrumbs">
 		<div class="container">

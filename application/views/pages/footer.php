@@ -40,11 +40,8 @@
 
 				<h6>HELP</h6>
 				<ul>
-					<li><a href="products.html">Track Order</a></li>
-					<li> <a href="men.html">Returns</a></li>
-					<li><a href="single.html">Shipping</a> </li>
-					<li><a href="men.html">FAQ</a></li>
-					<li><a href="products.html">HELP</a></li>
+					<li><a href="<?= base_url('index.php/faq'); ?>">FAQ</a></li>
+					<li><a href="<?= base_url('index.php/tnc'); ?>">Terms & Conditions </a></li>
 				</ul>
 			</div>
 

@@ -44,14 +44,29 @@
 								<div class="flex-viewport" style="overflow:hidden; position: relative;">
 									<ul class="slides" style="width:1000%; transition-duration: 0.6s; ">
 										<li data-thumb="<?= base_url('assets/images/e_' . $itemcategory . '/' . $row['image1']); ?>" class aria-hidden="true" style="width: 63px; float:left; display:block;">
-											<div class="thumb-image"> <img src="<?= base_url('assets/images/e_' . $itemcategory . '/' . $row['image1']);
-																					?>" data-imagezoom="true" class="img-responsive" draggable="false"> </div>
+											<div class="thumb-image"> <img src="<?= base_url('assets/images/e_' . $itemcategory . '/' . $row['image1']);?>" data-imagezoom="true" class="img-responsive" draggable="false"> </div>
 										</li>
-
 									</ul>
 								</div>
-
-
+								<ol class="flex-control-nav flex-control-thumbs">
+									<li data-thumb="<?= base_url('assets/images/e_' . $itemcategory . '/' . $row[ 'image1']); ?>">
+										<img src="<?= base_url('assets/images/e_' . $itemcategory . '/' . $row['image1']);?>" class="" draggable="false">
+									</li>
+									<li data-thumb="<?= base_url('assets/images/e_' . $itemcategory . '/' . $row['image2']); ?>">
+										<img src="<?= base_url('assets/images/e_' . $itemcategory . '/' . $row['image2']);?>" class="" draggable="false">
+									</li>
+									<li data-thumb="<?= base_url('assets/images/e_' . $itemcategory . '/' . $row['image3']); ?>">
+										<img src="<?= base_url('assets/images/e_' . $itemcategory . '/' . $row['image3']);?>" class="" draggable="false">
+									</li> 
+								</ol>
+								<ul class="flex-direction-nav">
+									<li class="flex-nav-prev">
+										<a class="flex-prev" href="#"> Previous </a>
+									</li>
+									<li class="flex-nav-next">
+										<a class="flex-next" href="#"> Next </a>
+									</li>
+								</ul>
 							</div>
 						</div>
 						<div class="col-md-7 single-top-in">
