@@ -1,2 +1,2 @@
-# elevate
-Web Programming's Final Project
+# Elevate
+Web Programming Final Project
