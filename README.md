@@ -2,7 +2,7 @@
 Web Programming Final Project
 
 
-## Developed Using
+## Developed using
 Programming Language : 
 - HTML
 - CSS
